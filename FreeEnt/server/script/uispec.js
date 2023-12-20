@@ -3990,7 +3990,11 @@ var FLAG_UISPEC = [
           {
             "flag": "Tpro",
             "title": "Pro chest randomization",
-            "description": "A skill-testing randomization, limiting the strength of available items, and weighted to favor stronger items in later-game and infrequently-visited areas.",
+            "description": "A skill-testing randomization, limiting the strength of available items, and weighted to favor stronger items in later-game and infrequently-visited areas."
+          },
+          {
+            "flag": "Tsemipro",
+            "title": "Semi-pro chest randomization",
             "subcontrols": [
               {
                 "flag": "@anon29",

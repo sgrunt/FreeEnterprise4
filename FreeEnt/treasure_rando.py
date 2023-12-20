@@ -215,6 +215,8 @@ def apply(env):
             weights = {i : getattr(row, f"tier{i}") for i in range(1,9)}
             if env.options.flags.has('treasure_wild_weighted'):
                 weights = util.get_boosted_weights(weights)
+            if env.options.flags.has('treasure_semipro'):
+                weights = util.get_semiboosted_weights(weights)
             if mintier:
                 for tier in range(1,mintier-1):
                     weights[mintier] += weights[tier]
