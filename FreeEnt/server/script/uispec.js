@@ -3988,9 +3988,231 @@ var FLAG_UISPEC = [
             ]
           },
           {
+            "flag": "Tvanillaish",
+            "title": "Vanilla-ish chest randomization",
+            "subcontrols": [
+              {
+                "flag": "@anon29",
+                "title": "Sparse options",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tsparse:10",
+                    "title": "Only 10% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:20",
+                    "title": "Only 20% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:30",
+                    "title": "Only 30% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:40",
+                    "title": "Only 40% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:50",
+                    "title": "Only 50% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:60",
+                    "title": "Only 60% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:70",
+                    "title": "Only 70% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:80",
+                    "title": "Only 80% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:90",
+                    "title": "Only 90% of chests are filled"
+                  }
+                ]
+              },
+              {
+                "flag": "@anon30",
+                "title": "Restrict item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmaxtier:7",
+                    "title": "Chests contain tier 7 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:6",
+                    "title": "Chests contain tier 6 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:5",
+                    "title": "Chests contain tier 5 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:4",
+                    "title": "Chests contain tier 4 items at best",
+                    "hard": true
+                  },
+                  {
+                    "flag": "Tmaxtier:3",
+                    "title": "Chests contain tier 3 items at best",
+                    "hard": true
+                  }
+                ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "flag": "Tpro",
             "title": "Pro chest randomization",
-            "description": "A skill-testing randomization, limiting the strength of available items, and weighted to favor stronger items in later-game and infrequently-visited areas."
+            "description": "A skill-testing randomization, limiting the strength of available items, and weighted to favor stronger items in later-game and infrequently-visited areas.",
+            "subcontrols": [
+              {
+                "flag": "@anon29",
+                "title": "Sparse options",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tsparse:10",
+                    "title": "Only 10% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:20",
+                    "title": "Only 20% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:30",
+                    "title": "Only 30% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:40",
+                    "title": "Only 40% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:50",
+                    "title": "Only 50% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:60",
+                    "title": "Only 60% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:70",
+                    "title": "Only 70% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:80",
+                    "title": "Only 80% of chests are filled"
+                  },
+                  {
+                    "flag": "Tsparse:90",
+                    "title": "Only 90% of chests are filled"
+                  }
+                ]
+              },
+              {
+                "flag": "@anon30",
+                "title": "Restrict item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmaxtier:7",
+                    "title": "Chests contain tier 7 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:6",
+                    "title": "Chests contain tier 6 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:5",
+                    "title": "Chests contain tier 5 items at best"
+                  },
+                  {
+                    "flag": "Tmaxtier:4",
+                    "title": "Chests contain tier 4 items at best",
+                    "hard": true
+                  },
+                  {
+                    "flag": "Tmaxtier:3",
+                    "title": "Chests contain tier 3 items at best",
+                    "hard": true
+                  }
+                ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
+                  }
+                ]
+              }
+            ]
           },
           {
             "flag": "Tsemipro",

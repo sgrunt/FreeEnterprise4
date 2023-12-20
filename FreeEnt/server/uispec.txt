@@ -248,6 +248,8 @@
 ...(Tmintier:6) Chests contain tier 6 items at minimum
 ...(Tmintier:7) Chests contain tier 7 items at minimum
 ...(Tmintier:8) Chests contain tier 8 items
+.(Tvanillaish) Vanilla-ish chest randomization
+..[ECHO:Tstandard]
 .(Tpro) Pro chest randomization
 ..[ECHO:Tstandard]
 .(Tsemipro) Semi-pro chest randomization
