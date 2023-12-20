@@ -3949,6 +3949,41 @@ var FLAG_UISPEC = [
                     "hard": true
                   }
                 ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
+                  }
+                ]
               }
             ]
           },
@@ -4026,6 +4061,41 @@ var FLAG_UISPEC = [
                     "flag": "Tmaxtier:3",
                     "title": "Chests contain tier 3 items at best",
                     "hard": true
+                  }
+                ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
                   }
                 ]
               }
@@ -4107,6 +4177,41 @@ var FLAG_UISPEC = [
                     "hard": true
                   }
                 ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
+                  }
+                ]
               }
             ]
           },
@@ -4186,6 +4291,41 @@ var FLAG_UISPEC = [
                     "hard": true
                   }
                 ]
+              },
+              {
+                "flag": "@anon31",
+                "title": "Improve item quality",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Tmintier:2",
+                    "title": "Chests contain tier 2 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:3",
+                    "title": "Chests contain tier 3 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:4",
+                    "title": "Chests contain tier 4 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:5",
+                    "title": "Chests contain tier 5 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:6",
+                    "title": "Chests contain tier 6 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:7",
+                    "title": "Chests contain tier 7 items at minimum"
+                  },
+                  {
+                    "flag": "Tmintier:8",
+                    "title": "Chests contain tier 8 items"
+                  }
+                ]
               }
             ]
           },
@@ -4201,7 +4341,7 @@ var FLAG_UISPEC = [
         "title": "No J-items in chests"
       },
       {
-        "flag": "@anon31",
+        "flag": "@anon32",
         "title": "Junk management",
         "type": "select",
         "subcontrols": [
@@ -4223,7 +4363,7 @@ var FLAG_UISPEC = [
     "title": "SHOPS",
     "controls": [
       {
-        "flag": "@anon32",
+        "flag": "@anon33",
         "title": "Shops",
         "important": true,
         "type": "select",
@@ -4294,7 +4434,7 @@ var FLAG_UISPEC = [
         "title": "Shop items are free"
       },
       {
-        "flag": "@anon33",
+        "flag": "@anon34",
         "title": "Sell prices",
         "type": "select",
         "subcontrols": [
@@ -4330,7 +4470,7 @@ var FLAG_UISPEC = [
     "title": "BOSSES",
     "controls": [
       {
-        "flag": "@anon34",
+        "flag": "@anon35",
         "title": "Bosses",
         "important": true,
         "type": "select",
@@ -4367,7 +4507,7 @@ var FLAG_UISPEC = [
         "description": "Replaces the Fabul Gauntlet boss with five unscaled normal enemy encounters from the nearby area."
       },
       {
-        "flag": "@anon35",
+        "flag": "@anon36",
         "title": "Change Wyvern's opening MegaNuke",
         "type": "select",
         "subcontrols": [
@@ -4388,7 +4528,7 @@ var FLAG_UISPEC = [
     "title": "ENCOUNTERS",
     "controls": [
       {
-        "flag": "@anon36",
+        "flag": "@anon37",
         "title": "Random encounter rate",
         "important": true,
         "type": "select",
@@ -4461,7 +4601,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon37",
+        "flag": "@anon38",
         "title": "Drop tables",
         "type": "select",
         "subcontrols": [
@@ -4538,7 +4678,7 @@ var FLAG_UISPEC = [
         "description": "Starter kits allow you to begin the game with additional items in your inventory.",
         "subcontrols": [
           {
-            "flag": "@anon38",
+            "flag": "@anon39",
             "title": "Kit 1",
             "type": "select",
             "subcontrols": [
@@ -4675,7 +4815,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon39",
+            "flag": "@anon40",
             "title": "Kit 2",
             "type": "select",
             "subcontrols": [
@@ -4812,7 +4952,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon40",
+            "flag": "@anon41",
             "title": "Kit 3",
             "type": "select",
             "subcontrols": [
@@ -4964,7 +5104,7 @@ var FLAG_UISPEC = [
         "title": "Edward can equip the Spoon"
       },
       {
-        "flag": "@anon41",
+        "flag": "@anon42",
         "title": "Smithy reward",
         "type": "select",
         "subcontrols": [
@@ -5002,7 +5142,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon42",
+        "flag": "@anon43",
         "title": "Restore vanilla behaviors",
         "subcontrols": [
           {
@@ -5063,7 +5203,7 @@ var FLAG_UISPEC = [
         "description": "<ul>\n    <li>Guidingway will introduce the challenge.</li>\n    <li>Guidingway will not explain the challenge.</li>\n    <li>Wacky challenges are not intended to be balanced, robust, coherent, fair, or bug-free.</li>\n    <li>(They are intended to be wacky.)</li>\n</ul>",
         "subcontrols": [
           {
-            "flag": "@anon43",
+            "flag": "@anon44",
             "title": "Select challenge",
             "type": "select",
             "subcontrols": [
@@ -5226,7 +5366,7 @@ var FLAG_UISPEC = [
     "title": "SPOILERS",
     "controls": [
       {
-        "flag": "@anon44",
+        "flag": "@anon45",
         "title": "No spoiler log",
         "type": "select",
         "subcontrols": [
@@ -5280,7 +5420,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon45",
+            "flag": "@anon46",
             "title": "Partial spoiler log",
             "subcontrols": [
               {
@@ -5296,7 +5436,7 @@ var FLAG_UISPEC = [
                 "title": "Spoil characters"
               },
               {
-                "flag": "@anon46",
+                "flag": "@anon47",
                 "title": "Spoil treasure chests",
                 "type": "select",
                 "subcontrols": [

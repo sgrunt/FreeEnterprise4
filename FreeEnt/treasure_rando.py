@@ -111,6 +111,11 @@ def apply(env):
         maxtier = int(maxtier)
         items_dbview.refine(lambda it: it.tier <= maxtier)
 
+    mintier = env.options.flags.get_suffix('Tmintier:')
+    if mintier:
+        mintier = int(mintier)
+        items_dbview.refine(lambda it: it.tier >= mintier)
+
     if env.meta.get('wacky_challenge') == 'kleptomania':
         items_dbview.refine(lambda it: (it.category not in ['weapon', 'armor']))
 
@@ -195,7 +200,7 @@ def apply(env):
             for i,t in enumerate(tier['chests']):
                 treasure_assignment.assign(t, tier['pool'][i])
     elif env.options.flags.has('treasure_wild') or env.options.flags.has('treasure_standard'):
-        max_item_tier = (99 if env.options.flags.has('treasure_wild') else 5)
+        max_item_tier = (99 if env.options.flags.has('treasure_wild') else (mintier if (mintier and (mintier > 5)) else 5))
         item_pool = items_dbview.get_refined_view(lambda it: it.tier <= max_item_tier).find_all()
         for t in plain_chests_dbview.find_all():
             treasure_assignment.assign(t, env.rnd.choice(item_pool).const)
@@ -210,6 +215,10 @@ def apply(env):
             weights = {i : getattr(row, f"tier{i}") for i in range(1,9)}
             if env.options.flags.has('treasure_wild_weighted'):
                 weights = util.get_boosted_weights(weights)
+            if mintier:
+                for tier in range(1,mintier-1):
+                    weights[mintier] += weights[tier]
+                    weights[tier] = 0
 
             # null out distributions for empty item tiers
             for i in range(1,9):

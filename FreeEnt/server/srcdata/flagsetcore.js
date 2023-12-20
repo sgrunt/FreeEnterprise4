@@ -469,6 +469,7 @@ class FlagLogicCore {
         }
         if (flagset.has_any("Tempty", "Tvanilla", "Tshuffle")) {
             this._simple_disable_regex(flagset, log, "Treasures are not random", "^Tmaxtier:");
+            this._simple_disable_regex(flagset, log, "Treasures are not random", "^Tmintier:");
         }
         if (flagset.has_any("Svanilla", "Scabins", "Sempty")) {
             this._simple_disable_regex(flagset, log, "Shops are not random", "^Sno:([^j]|j.)");

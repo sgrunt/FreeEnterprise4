@@ -723,8 +723,15 @@ def apply(env):
         else:
             unassigned_quest_slots.remove(RewardSlot.rydias_mom_item)
 
+        mintier = env.options.flags.get_suffix('Tmintier:')
+        if mintier:
+            mintier = int(mintier)
+
         if env.options.flags.has('treasure_standard') or env.options.flags.has('treasure_wild'):
-            src_pool = items_dbview.find_all(lambda it: it.tier in [6, 7, 8])
+            reward_tiers = [6, 7, 8]
+            if mintier:
+                reward_tiers = [tier for tier in reward_tiers if tier >= mintier]
+            src_pool = items_dbview.find_all(lambda it: it.tier in reward_tiers)
             pool = list(src_pool)
             while len(pool) < len(unassigned_quest_slots):
                 pool.append(env.rnd.choice(src_pool))
@@ -738,6 +745,10 @@ def apply(env):
                 weights = {i : getattr(quest_curve, f"tier{i}") for i in range(1,9)}
                 if env.options.flags.has('treasure_wild_weighted'):
                     weights = util.get_boosted_weights(weights)
+                if mintier:
+                    for tier in range(1,mintier-1):
+                        weights[mintier] += weights[tier]
+                        weights[tier] = 0
                 quest_distribution = util.Distribution(weights)
                 tier_counts = quest_distribution.choose_many(env.rnd, len(unassigned_quest_slots_for_curve))
                 pool = []
@@ -783,7 +794,10 @@ def apply(env):
                 weights = {i : getattr(c, f"tier{i}") for i in range(1,9)}
                 if env.options.flags.has('treasure_wild_weighted'):
                     weights = util.get_boosted_weights(weights)
-
+                if mintier:
+                    for tier in range(1,mintier-1):
+                        weights[mintier] += weights[tier]
+                        weights[tier] = 0
                 miab_distributions[c.area[len("MIAB_"):]] = util.Distribution(weights)
 
             tier_counts_by_area = {}
