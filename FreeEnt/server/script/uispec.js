@@ -4689,6 +4689,14 @@ var FLAG_UISPEC = [
       {
         "flag": "Sno:life",
         "title": "No Life potions in shops"
+      },
+      {
+        "flag": "Sno:veils",
+        "title": "No StarVeils/MoonVeils in shops"
+      },
+      {
+        "flag": "Sno:vampires",
+        "title": "No Vampires in shops"
       }
     ]
   },

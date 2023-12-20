@@ -284,6 +284,8 @@
 [Sno:apples] No Apples/Soma Drops in shops
 [Sno:sirens] No Sirens in shops
 [Sno:life] No Life potions in shops
+[Sno:veils] No StarVeils/MoonVeils in shops
+[Sno:vampires] No Vampires in shops
 
 == BOSSES
 <>* Bosses

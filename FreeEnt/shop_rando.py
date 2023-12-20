@@ -55,6 +55,11 @@ def apply(env):
         banned_items.append('#item.Siren')
     if env.options.flags.has('shops_no_life'):
         banned_items.append('#item.Life')
+    if env.options.flags.has('shops_no_veils'):
+        banned_items.append('#item.StarVeil')
+        banned_items.append('#item.MoonVeil')
+    if env.options.flags.has('shops_no_vampires'):
+        banned_items.append('#item.Vampire')
     if env.options.flags.has('no_adamants'):
         banned_items.append('#item.AdamantArmor')
     if env.options.flags.has('no_cursed_rings'):
@@ -223,7 +228,8 @@ def apply(env):
                 guaranteed_free_items.append('#item.Life')
 
             if not env.options.flags.has('shops_no_j_items'):
-                guaranteed_free_items.append('#item.StarVeil')
+                if not env.options.flags.has('shops_no_veils'):
+                    guaranteed_free_items.append('#item.StarVeil')
                 if not env.options.flags.has('bosses_unsafe'):
                     guaranteed_free_items.append('#item.ThorRage')
 
