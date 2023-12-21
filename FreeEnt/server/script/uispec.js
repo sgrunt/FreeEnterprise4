@@ -4754,6 +4754,18 @@ var FLAG_UISPEC = [
             ]
           },
           {
+            "flag": "Svanillaish",
+            "title": "Vanilla-ish shop randomization",
+            "subcontrols": [
+              {
+                "flag": "Sunsafe",
+                "title": "No safety checks",
+                "description": "Normally, the randomizer guarantees Cure2 potions, Life potions and StarVeils are readily available, and that Cure3 potions are available in seeds without white mages. This flag removes those checks.",
+                "hard": true
+              }
+            ]
+          },
+          {
             "flag": "Scabins",
             "title": "Shops sell only cabins",
             "hard": true

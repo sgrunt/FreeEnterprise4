@@ -110,6 +110,36 @@ def apply(env):
     elif env.options.flags.has('shops_cabins'):
         for shop_assignment in shop_assignments:
             shop_assignment.add('#item.Cabin')
+    elif env.options.flags.has('shops_vanillaish'):
+        weapons_by_tier = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []}
+        armor_by_tier = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []}
+        items_by_tier = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []}
+
+        for shop_assignment in shop_assignments:
+            shop = shop_assignment.shop
+            manifest = (shop.jmanifest if (shop.jmanifest and not env.options.flags.has('shops_no_j_items')) else shop.manifest)
+            for item_const in manifest:
+                item = items_dbview.find_one(lambda it: it.const == item_const) 
+                if item:
+                    candidate = None
+                    if item.category == 'weapon':
+                        if not weapons_by_tier[item.tier]:
+                            weapons_by_tier[item.tier] = items_dbview.find_all(lambda it: it.category == 'weapon' and it.tier == item.tier) 
+                        candidate = env.rnd.choice(weapons_by_tier[item.tier])
+                        weapons_by_tier[item.tier].remove(candidate)
+                    if item.category == 'armor':
+                        if not armor_by_tier[item.tier]:
+                            armor_by_tier[item.tier] = items_dbview.find_all(lambda it: it.category == 'armor' and it.tier == item.tier) 
+                        candidate = env.rnd.choice(armor_by_tier[item.tier])
+                        armor_by_tier[item.tier].remove(candidate)
+                    if item.category == 'item':
+                        if not items_by_tier[item.tier]:
+                            items_by_tier[item.tier] = items_dbview.find_all(lambda it: it.category == 'item' and it.tier == item.tier and not (it.shopoverride == 'wild')) 
+                        candidate = env.rnd.choice(items_by_tier[item.tier])
+                        items_by_tier[item.tier].remove(candidate)
+                    if candidate:
+                        shop_assignment.add(candidate.const)
+                
     elif env.options.flags.has('shops_shuffle'):
         shop_tiers = [
             list(filter(lambda sa: sa.shop.level == 'free', shop_assignments)),
