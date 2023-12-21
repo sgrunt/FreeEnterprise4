@@ -3071,6 +3071,85 @@ var FLAG_UISPEC = [
                 "title": "No safety checks",
                 "description": "<ul>\n    <li>Normally, you are guaranteed a path to the underworld that does not require first going to the moon. This flag removes that check.</li>\n    <li>If Kmiab is enabled, key items may appear in the Lunar Subterrane monster-in-a-box chests.</li>\n</ul>",
                 "hard": true
+              },
+              {
+                "flag": "@anon16",
+                "title": "Specify starting key item",
+                "type": "select",
+                "subcontrols": [
+                  {
+                    "flag": "Kstart:crystal",
+                    "title": "Start with the Crystal"
+                  },
+                  {
+                    "flag": "Kstart:pass",
+                    "title": "Start with the Pass"
+                  },
+                  {
+                    "flag": "Kstart:hook",
+                    "title": "Start with the Hook"
+                  },
+                  {
+                    "flag": "Kstart:darkness",
+                    "title": "Start with the Darkness Crystal"
+                  },
+                  {
+                    "flag": "Kstart:earth",
+                    "title": "Start with the Earth Crystal"
+                  },
+                  {
+                    "flag": "Kstart:twinharp",
+                    "title": "Start with the TwinHarp"
+                  },
+                  {
+                    "flag": "Kstart:package",
+                    "title": "Start with the Package"
+                  },
+                  {
+                    "flag": "Kstart:sandruby",
+                    "title": "Start with the SandRuby"
+                  },
+                  {
+                    "flag": "Kstart:baron",
+                    "title": "Start with the Baron Key"
+                  },
+                  {
+                    "flag": "Kstart:magma",
+                    "title": "Start with the Magma Key"
+                  },
+                  {
+                    "flag": "Kstart:tower",
+                    "title": "Start with the Tower Key"
+                  },
+                  {
+                    "flag": "Kstart:luca",
+                    "title": "Start with the Luca Key"
+                  },
+                  {
+                    "flag": "Kstart:adamant",
+                    "title": "Start with the Adamant"
+                  },
+                  {
+                    "flag": "Kstart:legend",
+                    "title": "Start with the Legend Sword"
+                  },
+                  {
+                    "flag": "Kstart:pan",
+                    "title": "Start with the Pan"
+                  },
+                  {
+                    "flag": "Kstart:spoon",
+                    "title": "Start with the Spoon"
+                  },
+                  {
+                    "flag": "Kstart:rat",
+                    "title": "Start with the Rat Tail"
+                  },
+                  {
+                    "flag": "Kstart:pink",
+                    "title": "Start with the Pink Tail"
+                  }
+                ]
               }
             ]
           }
@@ -3100,7 +3179,7 @@ var FLAG_UISPEC = [
     "title": "CHARACTERS",
     "controls": [
       {
-        "flag": "@anon16",
+        "flag": "@anon17",
         "title": "Characters",
         "important": true,
         "type": "select",
@@ -3121,7 +3200,7 @@ var FLAG_UISPEC = [
                 "description": "Normally, the randomizer will try to include every eligible character in the game at least once. This flag removes that logic, meaning some eligible characters may not appear."
               },
               {
-                "flag": "@anon17",
+                "flag": "@anon18",
                 "title": "Limit number of distinct characters",
                 "hard": true,
                 "null": true,
@@ -3182,12 +3261,12 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon18",
+                "flag": "@anon19",
                 "title": "Specify available characters",
                 "type": "select",
                 "subcontrols": [
                   {
-                    "flag": "@anon19",
+                    "flag": "@anon20",
                     "title": "Only include specific characters",
                     "compact": true,
                     "subcontrols": [
@@ -3242,7 +3321,7 @@ var FLAG_UISPEC = [
                     ]
                   },
                   {
-                    "flag": "@anon20",
+                    "flag": "@anon21",
                     "title": "Exclude specific characters",
                     "compact": true,
                     "subcontrols": [
@@ -3367,7 +3446,7 @@ var FLAG_UISPEC = [
                 "description": "Normally, the randomizer will try to include every eligible character in the game at least once. This flag removes that logic, meaning some eligible characters may not appear."
               },
               {
-                "flag": "@anon21",
+                "flag": "@anon22",
                 "title": "Limit number of distinct characters",
                 "hard": true,
                 "null": true,
@@ -3428,12 +3507,12 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon22",
+                "flag": "@anon23",
                 "title": "Specify available characters",
                 "type": "select",
                 "subcontrols": [
                   {
-                    "flag": "@anon23",
+                    "flag": "@anon24",
                     "title": "Only include specific characters",
                     "compact": true,
                     "subcontrols": [
@@ -3488,7 +3567,7 @@ var FLAG_UISPEC = [
                     ]
                   },
                   {
-                    "flag": "@anon24",
+                    "flag": "@anon25",
                     "title": "Exclude specific characters",
                     "compact": true,
                     "subcontrols": [
@@ -3561,7 +3640,7 @@ var FLAG_UISPEC = [
         "hard": true
       },
       {
-        "flag": "@anon25",
+        "flag": "@anon26",
         "title": "Specify possible starting characters",
         "null": true,
         "type": "select",
@@ -3710,7 +3789,7 @@ var FLAG_UISPEC = [
         "description": "Dismissed characters cannot be retrieved. (Normally, dismissed characters go to the Mysidia crystal room and the Tower of Wishes where they may be reclaimed.)"
       },
       {
-        "flag": "@anon26",
+        "flag": "@anon27",
         "title": "Limit maximum party size",
         "type": "select",
         "subcontrols": [
@@ -3738,7 +3817,7 @@ var FLAG_UISPEC = [
         "description": "You have the choice of whether to accept each new party member, but once your party is full, you cannot recruit anyone else."
       },
       {
-        "flag": "@anon27",
+        "flag": "@anon28",
         "title": "Permadeath options",
         "type": "select",
         "subcontrols": [
@@ -3768,7 +3847,7 @@ var FLAG_UISPEC = [
     "title": "TREASURES",
     "controls": [
       {
-        "flag": "@anon28",
+        "flag": "@anon29",
         "title": "Treasure chests (other than MIABs)",
         "important": true,
         "type": "select",
@@ -3779,7 +3858,7 @@ var FLAG_UISPEC = [
             "null": true,
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -3829,7 +3908,7 @@ var FLAG_UISPEC = [
             "description": "Treasure contents are the same as in original FF4, but their positions are shuffled. This randomization is weighted so that overworld treasures tend to remain in the overworld, and similarly for underworld/moon treasures.",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -3879,7 +3958,7 @@ var FLAG_UISPEC = [
             "description": "A basic randomization, allowing items of reasonable strength to appear. Items are equally likely to appear in any chest regardless of location.",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -3922,7 +4001,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -3951,7 +4030,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -3992,7 +4071,7 @@ var FLAG_UISPEC = [
             "title": "Vanilla-ish chest randomization",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -4035,7 +4114,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4064,7 +4143,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4106,7 +4185,7 @@ var FLAG_UISPEC = [
             "description": "A skill-testing randomization, limiting the strength of available items, and weighted to favor stronger items in later-game and infrequently-visited areas.",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -4149,7 +4228,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4178,7 +4257,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4219,7 +4298,7 @@ var FLAG_UISPEC = [
             "title": "Semi-pro chest randomization",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -4262,7 +4341,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4291,7 +4370,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4333,7 +4412,7 @@ var FLAG_UISPEC = [
             "description": "An unrestricted randomization, allowing equal chance for items to appear in any chest, including the most powerful items.",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -4376,7 +4455,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4405,7 +4484,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4447,7 +4526,7 @@ var FLAG_UISPEC = [
             "description": "Allows items of any strength to appear, including the most powerful items, but uses location-based weighting like the pro randomization.",
             "subcontrols": [
               {
-                "flag": "@anon29",
+                "flag": "@anon30",
                 "title": "Sparse options",
                 "type": "select",
                 "subcontrols": [
@@ -4490,7 +4569,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon30",
+                "flag": "@anon31",
                 "title": "Restrict item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4519,7 +4598,7 @@ var FLAG_UISPEC = [
                 ]
               },
               {
-                "flag": "@anon31",
+                "flag": "@anon32",
                 "title": "Improve item quality",
                 "type": "select",
                 "subcontrols": [
@@ -4567,7 +4646,7 @@ var FLAG_UISPEC = [
         "title": "No J-items in chests"
       },
       {
-        "flag": "@anon32",
+        "flag": "@anon33",
         "title": "Junk management",
         "type": "select",
         "subcontrols": [
@@ -4589,7 +4668,7 @@ var FLAG_UISPEC = [
     "title": "SHOPS",
     "controls": [
       {
-        "flag": "@anon33",
+        "flag": "@anon34",
         "title": "Shops",
         "important": true,
         "type": "select",
@@ -4672,7 +4751,7 @@ var FLAG_UISPEC = [
         "title": "Shop items are free"
       },
       {
-        "flag": "@anon34",
+        "flag": "@anon35",
         "title": "Sell prices",
         "type": "select",
         "subcontrols": [
@@ -4716,7 +4795,7 @@ var FLAG_UISPEC = [
     "title": "BOSSES",
     "controls": [
       {
-        "flag": "@anon35",
+        "flag": "@anon36",
         "title": "Bosses",
         "important": true,
         "type": "select",
@@ -4753,7 +4832,7 @@ var FLAG_UISPEC = [
         "description": "Replaces the Fabul Gauntlet boss with five unscaled normal enemy encounters from the nearby area."
       },
       {
-        "flag": "@anon36",
+        "flag": "@anon37",
         "title": "Change Wyvern's opening MegaNuke",
         "type": "select",
         "subcontrols": [
@@ -4774,7 +4853,7 @@ var FLAG_UISPEC = [
     "title": "ENCOUNTERS",
     "controls": [
       {
-        "flag": "@anon37",
+        "flag": "@anon38",
         "title": "Random encounter rate",
         "important": true,
         "type": "select",
@@ -4847,7 +4926,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon38",
+        "flag": "@anon39",
         "title": "Drop tables",
         "type": "select",
         "subcontrols": [
@@ -4924,7 +5003,7 @@ var FLAG_UISPEC = [
         "description": "Starter kits allow you to begin the game with additional items in your inventory.",
         "subcontrols": [
           {
-            "flag": "@anon39",
+            "flag": "@anon40",
             "title": "Kit 1",
             "type": "select",
             "subcontrols": [
@@ -5061,7 +5140,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon40",
+            "flag": "@anon41",
             "title": "Kit 2",
             "type": "select",
             "subcontrols": [
@@ -5198,7 +5277,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon41",
+            "flag": "@anon42",
             "title": "Kit 3",
             "type": "select",
             "subcontrols": [
@@ -5350,7 +5429,7 @@ var FLAG_UISPEC = [
         "title": "Edward can equip the Spoon"
       },
       {
-        "flag": "@anon42",
+        "flag": "@anon43",
         "title": "Smithy reward",
         "type": "select",
         "subcontrols": [
@@ -5388,7 +5467,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon43",
+        "flag": "@anon44",
         "title": "Restore vanilla behaviors",
         "subcontrols": [
           {
@@ -5449,7 +5528,7 @@ var FLAG_UISPEC = [
         "description": "<ul>\n    <li>Guidingway will introduce the challenge.</li>\n    <li>Guidingway will not explain the challenge.</li>\n    <li>Wacky challenges are not intended to be balanced, robust, coherent, fair, or bug-free.</li>\n    <li>(They are intended to be wacky.)</li>\n</ul>",
         "subcontrols": [
           {
-            "flag": "@anon44",
+            "flag": "@anon45",
             "title": "Select challenge",
             "type": "select",
             "subcontrols": [
@@ -5612,7 +5691,7 @@ var FLAG_UISPEC = [
     "title": "SPOILERS",
     "controls": [
       {
-        "flag": "@anon45",
+        "flag": "@anon46",
         "title": "No spoiler log",
         "type": "select",
         "subcontrols": [
@@ -5666,7 +5745,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon46",
+            "flag": "@anon47",
             "title": "Partial spoiler log",
             "subcontrols": [
               {
@@ -5682,7 +5761,7 @@ var FLAG_UISPEC = [
                 "title": "Spoil characters"
               },
               {
-                "flag": "@anon47",
+                "flag": "@anon48",
                 "title": "Spoil treasure chests",
                 "type": "select",
                 "subcontrols": [

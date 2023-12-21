@@ -380,6 +380,8 @@ def apply(env):
     keyitem_assigner.item_tier(3).set_max_slot_bucket(2)
 
     keyitem_assigner.slot_tier(0).extend(ITEM_SLOTS)
+    if env.options.flags.has_any('key_items_start_crystal', 'key_items_start_pass', 'key_items_start_hook', 'key_items_start_darkness', 'key_items_start_earth', 'key_items_start_twinharp', 'key_items_start_package', 'key_items_start_sandruby', 'key_items_start_baron', 'key_items_start_magma', 'key_items_start_tower', 'key_items_start_luca', 'key_items_start_adamant', 'key_items_start_legend', 'key_items_start_pan', 'key_items_start_spoon', 'key_items_start_rat', 'key_items_start_pink'):
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.starting_item)
     if env.options.flags.has('no_free_key_item'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
     else:
@@ -387,6 +389,41 @@ def apply(env):
 
     keyitem_assigner.item_tier(1).extend(ESSENTIAL_KEY_ITEMS)
     keyitem_assigner.item_tier(2).extend(NONESSENTIAL_KEY_ITEMS)
+
+    if env.options.flags.has('key_items_start_crystal'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Crystal'))
+    if env.options.flags.has('key_items_start_hook'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.fe_Hook'))
+    if env.options.flags.has('key_items_start_darkness'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.DarkCrystal'))
+    if env.options.flags.has('key_items_start_earth'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.EarthCrystal'))
+    if env.options.flags.has('key_items_start_twinharp'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.TwinHarp'))
+    if env.options.flags.has('key_items_start_package'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Package'))
+    if env.options.flags.has('key_items_start_sandruby'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.SandRuby'))
+    if env.options.flags.has('key_items_start_baron'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Baron'))
+    if env.options.flags.has('key_items_start_magma'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Magma'))
+    if env.options.flags.has('key_items_start_tower'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Tower'))
+    if env.options.flags.has('key_items_start_luca'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Luca'))
+    if env.options.flags.has('key_items_start_adamant'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Adamant'))
+    if env.options.flags.has('key_items_start_legend'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Legend'))
+    if env.options.flags.has('key_items_start_pan'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Pan'))
+    if env.options.flags.has('key_items_start_spoon'):
+        keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Spoon'))
+    if env.options.flags.has('key_items_start_rat'):
+        keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Rat'))
+    if env.options.flags.has('key_items_start_pink'):
+        keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Pink'))
 
     if env.meta.get('has_objectives', False) and env.meta.get('zeromus_required', True):
         keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Crystal'))
@@ -459,7 +496,7 @@ def apply(env):
         keyitem_assigner.slot_tier(3).extend(CHEST_ITEM_SLOTS)
     
 
-    if env.options.flags.has('pass_in_key_items'):
+    if env.options.flags.has('pass_in_key_items') and not env.options.flags.has('key_items_start_pass'):
         keyitem_assigner.item_tier(1).append(ItemReward('#item.Pass'))
 
     ## Deprecated no_magma code, preserving in case of future implementation.
@@ -517,6 +554,42 @@ def apply(env):
                     if slot not in rewards_assignment:
                         remaining_slots.append(slot)
         else:
+            if env.options.flags.has('key_items_start_crystal'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Crystal')
+            if env.options.flags.has('key_items_start_pass'):
+                rewards_assignment[RewardSlot.starting_item] = ItemReward('#item.Pass')
+            if env.options.flags.has('key_items_start_hook'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.fe_Hook')
+            if env.options.flags.has('key_items_start_darkness'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.DarkCrystal')
+            if env.options.flags.has('key_items_start_earth'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.EarthCrystal')
+            if env.options.flags.has('key_items_start_twinharp'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.TwinHarp')
+            if env.options.flags.has('key_items_start_package'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Package')
+            if env.options.flags.has('key_items_start_sandruby'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.SandRuby')
+            if env.options.flags.has('key_items_start_baron'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Baron')
+            if env.options.flags.has('key_items_start_magma'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Magma')
+            if env.options.flags.has('key_items_start_tower'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Tower')
+            if env.options.flags.has('key_items_start_luca'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Luca')
+            if env.options.flags.has('key_items_start_adamant'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Adamant')
+            if env.options.flags.has('key_items_start_legend'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Legend')
+            if env.options.flags.has('key_items_start_pan'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Pan')
+            if env.options.flags.has('key_items_start_spoon'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Spoon')
+            if env.options.flags.has('key_items_start_rat'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Rat')
+            if env.options.flags.has('key_items_start_pink'):
+                rewards_assignment[RewardSlot.starting_item] = KeyItemReward('#item.Pink')
             keyitem_assignment, remaining_slots, remaining_items = keyitem_assigner.assign(env.rnd)
             rewards_assignment.update(keyitem_assignment)
 

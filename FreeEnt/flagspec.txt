@@ -19,6 +19,7 @@ Orandom:1/Orandom:2/Orandom:3/Orandom:4/Orandom:5/Orandom:6/Orandom:7/Orandom:8 
 Oreq:all/Oreq:1/Oreq:2/Oreq:3/Oreq:4/Oreq:5/Oreq:6/Oreq:7/Oreq:8/Oreq:9/Oreq:10
 Owin:game/Owin:crystal
 Kvanilla Kmain Ksummon Kmoon Kmiab Knofree Kunsafe Kforce:magma/Kforce:hook
+Kstart:crystal/Kstart:pass/Kstart:hook/Kstart:darkness/Kstart:earth/Kstart:twinharp/Kstart:package/Kstart:sandruby/Kstart:baron/Kstart:magma/Kstart:tower/Kstart:luca/Kstart:adamant/Kstart:legend/Kstart:pan/Kstart:spoon/Kstart:rat/Kstart:pink
 Pnone Pshop Pkey Pchests
 Cvanilla Cstandard/Crelaxed Cnofree Cnoearned Cmaybe 
 Cdistinct:1/Cdistinct:2/Cdistinct:3/Cdistinct:4/Cdistinct:5/Cdistinct:6/Cdistinct:7/Cdistinct:8/Cdistinct:9/Cdistinct:10/Cdistinct:11
@@ -95,6 +96,24 @@ Knofree              no_free_key_item
 Kunsafe              key_items_unsafe
 Kforce:magma         key_items_force_magma
 Kforce:hook          key_items_force_hook
+Kstart:crystal       key_items_start_crystal
+Kstart:pass          key_items_start_pass
+Kstart:hook          key_items_start_hook
+Kstart:darkness      key_items_start_darkness
+Kstart:earth         key_items_start_earth
+Kstart:twinharp      key_items_start_twinharp
+Kstart:package       key_items_start_package
+Kstart:sandruby      key_items_start_sandruby
+Kstart:baron         key_items_start_baron
+Kstart:magma         key_items_start_magma
+Kstart:tower         key_items_start_tower
+Kstart:luca          key_items_start_luca
+Kstart:adamant       key_items_start_adamant
+Kstart:legend        key_items_start_legend
+Kstart:pan           key_items_start_pan
+Kstart:spoon         key_items_start_spoon
+Kstart:rat           key_items_start_rat
+Kstart:pink          key_items_start_pink
 
 Pnone                pass_none
 Pshop                pass_in_shop

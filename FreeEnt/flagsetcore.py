@@ -396,6 +396,11 @@ class FlagLogicCore:
 
         if flagset.has('Kvanilla'):
             self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe'])
+            self._simple_disable_regex(flagset, log, 'Key items not randomized', ['^Kstart:'])
+
+        if flagset.has('Kstart:pass') and not flagset.has('Pkey'):
+            flagset.set('Pkey')
+            self._lib.push(log, ['correction', 'Kstart:pass implies Pkey'])
 
         if flagset.has('Cvanilla'):
             self._simple_disable_regex(flagset, log, 'Characters not randomized', r'^C(maybe|distinct:|only:|no:)')
@@ -518,6 +523,10 @@ class FlagLogicCore:
             # remove random quest type specifiers if no random objectives specified
             if not flagset.get_list(r'^Orandom:\d'):
                 self._simple_disable_regex(flagset, log, 'No random objectives specified', r'^Orandom:[^\d]')
+
+
+        if flagset.has('Owin:crystal'):
+            self._simple_disable(flagset, log, 'Cannot start with crystal on Owin:crystal', ['Kstart:crystal'])
 
         return log
 

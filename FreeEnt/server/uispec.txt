@@ -67,6 +67,25 @@
 ...(Kforce:magma) Guarantee underworld access via Magma Key
 ...(Kforce:hook)! Force underworld access via Hook route
 ..[Kunsafe]! No safety checks
+..<> Specify starting key item
+...(Kstart:crystal) Start with the Crystal
+...(Kstart:pass) Start with the Pass
+...(Kstart:hook) Start with the Hook
+...(Kstart:darkness) Start with the Darkness Crystal
+...(Kstart:earth) Start with the Earth Crystal
+...(Kstart:twinharp) Start with the TwinHarp
+...(Kstart:package) Start with the Package
+...(Kstart:sandruby) Start with the SandRuby
+...(Kstart:baron) Start with the Baron Key
+...(Kstart:magma) Start with the Magma Key
+...(Kstart:tower) Start with the Tower Key
+...(Kstart:luca) Start with the Luca Key
+...(Kstart:adamant) Start with the Adamant
+...(Kstart:legend) Start with the Legend Sword
+...(Kstart:pan) Start with the Pan
+...(Kstart:spoon) Start with the Spoon
+...(Kstart:rat) Start with the Rat Tail
+...(Kstart:pink) Start with the Pink Tail
 
 == PASS
 [Pshop] Include Pass in a shop

@@ -444,6 +444,11 @@ class FlagLogicCore {
         }
         if (flagset.has("Kvanilla")) {
             this._simple_disable(flagset, log, "Key items not randomized", ["Kunsafe"]);
+            this._simple_disable_regex(flagset, log, "Key items not randomized", ["^Kstart:"]);
+        }
+        if ((flagset.has("Kstart:pass") && (! flagset.has("Pkey")))) {
+            flagset.set("Pkey");
+            this._lib.push(log, ["correction", "Kstart:pass implies Pkey"]);
         }
         if (flagset.has("Cvanilla")) {
             this._simple_disable_regex(flagset, log, "Characters not randomized", "^C(maybe|distinct:|only:|no:)");
@@ -582,6 +587,9 @@ class FlagLogicCore {
             if ((! flagset.get_list("^Orandom:\\d"))) {
                 this._simple_disable_regex(flagset, log, "No random objectives specified", "^Orandom:[^\\d]");
             }
+        }
+        if (flagset.has("Owin:crystal")) {
+            this._simple_disable(flagset, log, "Cannot start with crystal on Owin:crystal", ["Kstart:crystal"]);
         }
         return log;
     }
