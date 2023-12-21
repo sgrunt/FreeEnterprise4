@@ -321,6 +321,7 @@
 .(Bwhyburn) Disable Wyvern's opening MegaNuke
 .(Bwhichburn) Replace Wyvern's opening MegaNuke with random attack
 .(Bwhybez) Disable Golbez's Shadow summon
+.(Bwhichbez) Replace Golbez's and Shadow's spells with random spells
 
 == ENCOUNTERS
 <>* Random encounter rate

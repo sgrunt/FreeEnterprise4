@@ -4858,6 +4858,10 @@ var FLAG_UISPEC = [
           {
             "flag": "Bwhybez",
             "title": "Disable Golbez's Shadow summon"
+          },
+          {
+            "flag": "Bwhichbez",
+            "title": "Replace Golbez's and Shadow's spells with random spells"
           }
         ]
       }
