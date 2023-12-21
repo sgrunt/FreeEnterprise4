@@ -4854,7 +4854,14 @@ var FLAG_UISPEC = [
             "flag": "Bwhichburn",
             "title": "Replace Wyvern's opening MegaNuke with random attack",
             "description": "The replacement attack will be weaker than MegaNuke (unless <em>Bunsafe</em> is enabled, in which case it may not be)."
-          },
+          }
+        ]
+      },
+      {
+        "flag": "@anon38",
+        "title": "Change Golbez's behaviour",
+        "type": "select",
+        "subcontrols": [
           {
             "flag": "Bwhybez",
             "title": "Disable Golbez's Shadow summon"
@@ -4871,7 +4878,7 @@ var FLAG_UISPEC = [
     "title": "ENCOUNTERS",
     "controls": [
       {
-        "flag": "@anon38",
+        "flag": "@anon39",
         "title": "Random encounter rate",
         "important": true,
         "type": "select",
@@ -4944,7 +4951,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon39",
+        "flag": "@anon40",
         "title": "Drop tables",
         "type": "select",
         "subcontrols": [
@@ -5021,7 +5028,7 @@ var FLAG_UISPEC = [
         "description": "Starter kits allow you to begin the game with additional items in your inventory.",
         "subcontrols": [
           {
-            "flag": "@anon40",
+            "flag": "@anon41",
             "title": "Kit 1",
             "type": "select",
             "subcontrols": [
@@ -5170,7 +5177,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon41",
+            "flag": "@anon42",
             "title": "Kit 2",
             "type": "select",
             "subcontrols": [
@@ -5319,7 +5326,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon42",
+            "flag": "@anon43",
             "title": "Kit 3",
             "type": "select",
             "subcontrols": [
@@ -5483,7 +5490,7 @@ var FLAG_UISPEC = [
         "title": "Edward can equip the Spoon"
       },
       {
-        "flag": "@anon43",
+        "flag": "@anon44",
         "title": "Smithy reward",
         "type": "select",
         "subcontrols": [
@@ -5521,7 +5528,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon44",
+        "flag": "@anon45",
         "title": "Restore vanilla behaviors",
         "subcontrols": [
           {
@@ -5582,7 +5589,7 @@ var FLAG_UISPEC = [
         "description": "<ul>\n    <li>Guidingway will introduce the challenge.</li>\n    <li>Guidingway will not explain the challenge.</li>\n    <li>Wacky challenges are not intended to be balanced, robust, coherent, fair, or bug-free.</li>\n    <li>(They are intended to be wacky.)</li>\n</ul>",
         "subcontrols": [
           {
-            "flag": "@anon45",
+            "flag": "@anon46",
             "title": "Select challenge",
             "type": "select",
             "subcontrols": [
@@ -5745,7 +5752,7 @@ var FLAG_UISPEC = [
     "title": "SPOILERS",
     "controls": [
       {
-        "flag": "@anon46",
+        "flag": "@anon47",
         "title": "No spoiler log",
         "type": "select",
         "subcontrols": [
@@ -5799,7 +5806,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon47",
+            "flag": "@anon48",
             "title": "Partial spoiler log",
             "subcontrols": [
               {
@@ -5815,7 +5822,7 @@ var FLAG_UISPEC = [
                 "title": "Spoil characters"
               },
               {
-                "flag": "@anon48",
+                "flag": "@anon49",
                 "title": "Spoil treasure chests",
                 "type": "select",
                 "subcontrols": [
