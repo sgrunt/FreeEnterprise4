@@ -3048,6 +3048,11 @@ var FLAG_UISPEC = [
                 "hard": true
               },
               {
+                "flag": "Kpink",
+                "title": "Pink Tail trades for a key item",
+                "hard": true
+              },
+              {
                 "flag": "Knofree",
                 "title": "No free key item in Toroia",
                 "description": "Edward in Toroia will not give you a key item. Instead, a key item may be earned from Rydia's mom in Mist, who will appear after you have found and defeated the Mist Dragon.",

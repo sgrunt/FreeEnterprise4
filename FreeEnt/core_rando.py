@@ -92,6 +92,7 @@ ITEM_SLOTS = {
     RewardSlot.pan_trade_item         : ['underground?', '#item.Pan?'],
     RewardSlot.feymarch_item          : ['underground?'],
     RewardSlot.rat_trade_item         : ['#item.fe_Hook?', '#item.Rat?'],
+    RewardSlot.pink_trade_item        : ['#item.fe_Hook?', '#item.Pink?'],
     RewardSlot.forge_item             : ['underground?', '#item.Adamant?', '#item.Legend?'],
     RewardSlot.rydias_mom_item        : ['dmist?'],
     }
@@ -386,6 +387,8 @@ def apply(env):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.starting_item)
     if not env.options.flags.has('key_item_from_forge'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.forge_item)
+    if not env.options.flags.has('key_item_from_pink_tail'):
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.pink_trade_item)
     if env.options.flags.has('no_free_key_item'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
     else:
@@ -429,6 +432,11 @@ def apply(env):
     if env.options.flags.has('key_items_start_pink'):
         keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Pink'))
 
+    if env.options.flags.has('key_item_from_pink_tail'):
+        # pink tail is essential if Kpink is on
+        keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Pink'))
+        keyitem_assigner.item_tier(1).append(KeyItemReward('#item.Pink'))
+
     if env.meta.get('has_objectives', False) and env.meta.get('zeromus_required', True):
         keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Crystal'))
         if env.options.flags.has('objective_mode_classicforge'):
@@ -436,6 +444,8 @@ def apply(env):
 
     if env.options.flags.has('key_item_from_forge'):
         keyitem_assigner.item_tier(3).append(ItemReward('#item.Excalibur'))
+    if env.options.flags.has('key_item_from_pink_tail') and not env.options.flags.has('no_adamants'):
+        keyitem_assigner.item_tier(3).append(ItemReward('#item.AdamantArmor'))
 
     for item in env.meta.get('objective_required_key_items', []):
         reward = KeyItemReward(item)
@@ -805,6 +815,8 @@ def apply(env):
 
         if not env.options.flags.has('key_item_from_forge'):
             unassigned_quest_slots.remove(RewardSlot.forge_item)
+        if not env.options.flags.has('key_item_from_pink_tail'):
+            unassigned_quest_slots.remove(RewardSlot.pink_trade_item)
 
         mintier = env.options.flags.get_suffix('Tmintier:')
         if mintier:
@@ -954,12 +966,13 @@ def apply(env):
     if env.meta.get('has_objectives', False) and env.meta.get('zeromus_required', True):
         rewards_assignment[RewardSlot.fixed_crystal] = KeyItemReward('#item.Crystal')
 
-    if env.options.flags.has('no_adamants'):
-        items = items_dbview.find_all(lambda it: it.tier in [7, 8])
-        pink_tail_item = env.rnd.choice(items)
-        rewards_assignment[RewardSlot.pink_trade_item] = ItemReward(pink_tail_item.const)
-    else:
-        rewards_assignment[RewardSlot.pink_trade_item] = ItemReward('#item.AdamantArmor')
+    if not env.options.flags.has('key_item_from_pink_tail'):
+        if env.options.flags.has('no_adamants'):
+            items = items_dbview.find_all(lambda it: it.tier in [7, 8])
+            pink_tail_item = env.rnd.choice(items)
+            rewards_assignment[RewardSlot.pink_trade_item] = ItemReward(pink_tail_item.const)
+        else:
+            rewards_assignment[RewardSlot.pink_trade_item] = ItemReward('#item.AdamantArmor')
 
     # for now, assign flat character positions
     rewards_assignment[RewardSlot.starting_character] = AxtorReward('#actor.DKCecil')
@@ -1058,7 +1071,7 @@ def apply(env):
     env.spoilers.add_table("KEY ITEM LOCATIONS (and Pass if Pkey)", key_item_spoilers, public=env.options.flags.has_any('-spoil:all', '-spoil:keyitems'))
 
     quest_spoilers = []
-    for slot in list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS) + [RewardSlot.pink_trade_item]:
+    for slot in list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS):
         if slot in rewards_assignment:
             reward = rewards_assignment[slot]
             if type(reward) is EmptyReward:
