@@ -62,6 +62,7 @@
 ..[Ksummon]! Mix with summon quest rewards
 ..[Kmoon]! Mix with moon boss rewards
 ..[Kmiab]! Mix with monster-in-a-box chests
+..[Kforge]! Forge provides a key item
 ..[Knofree]! No free key item in Toroia
 ..<> Underworld access
 ...(Kforce:magma) Guarantee underworld access via Magma Key

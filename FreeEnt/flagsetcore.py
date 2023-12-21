@@ -390,7 +390,14 @@ class FlagLogicCore:
         # NOTE: mutex flags ARE handled internally by FlagSet, don't worry about them here
 
         # key item flags
-        if flagset.has_any('Ksummon', 'Kmoon', 'Kmiab') and not flagset.has('Kmain'):
+        if flagset.has('Kforge') and flagset.has('Omode:classicforge'):
+            self._simple_disable(flagset, log, 'Classic forge is incompatible with Kforge', ['Kforge'])
+
+        if flagset.has('Kforge'):
+            self._simple_disable_regex(flagset, log, '-smith is incompatible with Kforge', r'^-smith:')
+
+
+        if flagset.has_any('Ksummon', 'Kmoon', 'Kmiab', 'Kforge') and not flagset.has('Kmain'):
             flagset.set('Kmain')
             self._lib.push(log, ['correction', 'Advanced key item randomizations are enabled; forced to add Kmain'])
 

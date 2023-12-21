@@ -92,6 +92,7 @@ ITEM_SLOTS = {
     RewardSlot.pan_trade_item         : ['underground?', '#item.Pan?'],
     RewardSlot.feymarch_item          : ['underground?'],
     RewardSlot.rat_trade_item         : ['#item.fe_Hook?', '#item.Rat?'],
+    RewardSlot.forge_item             : ['underground?', '#item.Adamant?', '#item.Legend?'],
     RewardSlot.rydias_mom_item        : ['dmist?'],
     }
 
@@ -330,6 +331,7 @@ QUEST_REWARD_CURVES = {
         RewardSlot.feymarch_queen_item,
         RewardSlot.feymarch_king_item,
         RewardSlot.baron_throne_item,
+        RewardSlot.forge_item,
     ],
 
     'Moon_Quest' : [
@@ -382,6 +384,8 @@ def apply(env):
     keyitem_assigner.slot_tier(0).extend(ITEM_SLOTS)
     if env.options.flags.has_any('key_items_start_crystal', 'key_items_start_pass', 'key_items_start_hook', 'key_items_start_darkness', 'key_items_start_earth', 'key_items_start_twinharp', 'key_items_start_package', 'key_items_start_sandruby', 'key_items_start_baron', 'key_items_start_magma', 'key_items_start_tower', 'key_items_start_luca', 'key_items_start_adamant', 'key_items_start_legend', 'key_items_start_pan', 'key_items_start_spoon', 'key_items_start_rat', 'key_items_start_pink'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.starting_item)
+    if not env.options.flags.has('key_item_from_forge'):
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.forge_item)
     if env.options.flags.has('no_free_key_item'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
     else:
@@ -429,6 +433,9 @@ def apply(env):
         keyitem_assigner.item_tier(1).remove(KeyItemReward('#item.Crystal'))
         if env.options.flags.has('objective_mode_classicforge'):
             keyitem_assigner.item_tier(3).append(ItemReward('#item.Excalibur'))
+
+    if env.options.flags.has('key_item_from_forge'):
+        keyitem_assigner.item_tier(3).append(ItemReward('#item.Excalibur'))
 
     for item in env.meta.get('objective_required_key_items', []):
         reward = KeyItemReward(item)
@@ -795,6 +802,9 @@ def apply(env):
             unassigned_quest_slots.remove(RewardSlot.toroia_hospital_item)
         else:
             unassigned_quest_slots.remove(RewardSlot.rydias_mom_item)
+
+        if not env.options.flags.has('key_item_from_forge'):
+            unassigned_quest_slots.remove(RewardSlot.forge_item)
 
         mintier = env.options.flags.get_suffix('Tmintier:')
         if mintier:

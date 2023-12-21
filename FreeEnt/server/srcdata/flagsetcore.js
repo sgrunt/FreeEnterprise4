@@ -438,7 +438,13 @@ class FlagLogicCore {
     fix(flagset) {
         var all_spoiler_flags, ch, char_objective_flags, distinct_count, distinct_flags, has_unavailable_characters, log, only_flags, pass_quest_flags, pool, required_chars, sparse_spoiler_flags, start_exclude_flags, start_include_flags, win_flags;
         log = [];
-        if ((flagset.has_any("Ksummon", "Kmoon", "Kmiab") && (! flagset.has("Kmain")))) {
+        if ((flagset_has("Kforge") && flagset.has("Omode:classicforge"))) {
+            this._simple_disable(flagset, log, "Classic forge is incompatible with Kforge", ["Kforge"]);
+        }
+        if (flagset_has("Kforge")) {
+            this._simple_disable_regex(flagset, log, "-smith is incompatible with Kforge", ["^-smith:"]);
+        }
+        if ((flagset.has_any("Ksummon", "Kmoon", "Kmiab", "Kforge") && (! flagset.has("Kmain")))) {
             flagset.set("Kmain");
             this._lib.push(log, ["correction", "Advanced key item randomizations are enabled; forced to add Kmain"]);
         }
