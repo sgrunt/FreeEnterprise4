@@ -1031,7 +1031,7 @@ def apply(env):
     # need a table indicating which slots could contain key items for hinting
     # purposes, might as well do that here
     if env.options.hide_flags:
-        potential_key_item_slots = list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS) + list(CHEST_ITEM_SLOTS)
+        potential_key_item_slots = list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS) + list(CHEST_ITEM_SLOTS) + 2
     elif env.options.flags.has('key_items_vanilla'):
         potential_key_item_slots = [s for s in range(RewardSlot.MAX_COUNT) if s in rewards_assignment and isinstance(rewards_assignment[s], ItemReward) and rewards_assignment[s].is_key]
     else:
@@ -1046,6 +1046,10 @@ def apply(env):
             potential_key_item_slots.extend(MOON_BOSS_SLOTS)
         if env.options.flags.has('key_items_in_miabs'):
             potential_key_item_slots.extend(CHEST_ITEM_SLOTS)
+        if env.options.flags.has('key_item_from_forge'):
+            potential_key_item_slots.append(RewardSlot.forge_item)
+        if env.options.flags.has('key_item_from_pink_tail'):
+            potential_key_item_slots.append(RewardSlot.pink_trade_item)
 
     env.add_binary(BusAddress(0x21dc00), [1 if s in potential_key_item_slots else 0 for s in range(RewardSlot.MAX_COUNT)], as_script=True)
     env.add_substitution('randomizer key item count', '{:02X}'.format(rewards_assignment.count_key_items()))
