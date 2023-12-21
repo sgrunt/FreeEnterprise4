@@ -438,6 +438,10 @@ class FlagLogicCore {
     fix(flagset) {
         var all_spoiler_flags, ch, char_objective_flags, distinct_count, distinct_flags, has_unavailable_characters, log, only_flags, pass_quest_flags, pool, required_chars, sparse_spoiler_flags, start_exclude_flags, start_include_flags, win_flags;
         log = [];
+        if ((flagset.has("Kunsafer") && (! flagset.has("Kmoon")))) {
+            flagset.set("Kmoon");
+            this._lib.push(log, ["correction", "Kunsafer requires placing key items on the moon; adding Kmoon"]);
+        }
         if ((flagset.has("Kforge") && flagset.has("Omode:classicforge"))) {
             this._simple_disable(flagset, log, "Classic forge is incompatible with Kforge", ["Kforge"]);
         }
@@ -449,14 +453,14 @@ class FlagLogicCore {
             this._lib.push(log, ["correction", "Advanced key item randomizations are enabled; forced to add Kmain"]);
         }
         if (flagset.has("Kvanilla")) {
-            this._simple_disable(flagset, log, "Key items not randomized", ["Kunsafe"]);
+            this._simple_disable(flagset, log, "Key items not randomized", ["Kunsafe", "Kunsafer"]);
             this._simple_disable_regex(flagset, log, "Key items not randomized", ["^Kstart:"]);
         }
         if (flagset.has("Kstart:darkness")) {
             this._simple_disable(flagset, log, "Klatedark is incompatible with starting with Darkness", ["Klatedark"]);
         }
         if (flagset.has("Klatedark")) {
-            this._simple_disable(flagset, log, "Klatedark implicitly guarantees safe underground access", ["Kunsafe"]);
+            this._simple_disable(flagset, log, "Klatedark implicitly guarantees safe underground access", ["Kunsafe", "Kunsafer"]);
         }
         if ((flagset.has("Kstart:pass") && (! flagset.has("Pkey")))) {
             flagset.set("Pkey");

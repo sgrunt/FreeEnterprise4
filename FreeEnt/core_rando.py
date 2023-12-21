@@ -359,7 +359,7 @@ def apply(env):
         items_dbview.refine(lambda it: it.const != '#item.Cursed')
 
     unsafe = False
-    if env.options.flags.has('key_items_unsafe'):
+    if env.options.flags.has('key_items_unsafe') or env.options.flags.has('key_items_unsafer'):
         unsafe = True
 
     keyitem_assigner = priority_assigner.PriorityAssigner()
@@ -722,8 +722,18 @@ def apply(env):
         if underground_path_disallowed:
             tests.append(['underground', underground_path_disallowed])
 
+        magma_path_forced = None 
+
+        if env.options.flags.has('key_items_unsafer'):
+            if not env.options.flags.has('key_items_force_hook'):
+                magma_path_forced = 'moon'
+            tests.append(['#item.fe_Hook', [], 'moon'])
+
         if env.options.flags.has('key_items_force_hook'):
-            tests.append(['#item.Magma', [], 'underground'])
+            magma_path_forced = 'underground'
+
+        if magma_path_forced:
+            tests.append(['#item.Magma', [], magma_path_forced])
 
         if env.options.flags.has('key_items_late_darkness'):
             tests.append(['#item.DarkCrystal', [], 'underground'])

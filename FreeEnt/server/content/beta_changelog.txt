@@ -1,4 +1,6 @@
 (December 21, 2023)
+· Additional K flags:
+  · Kunsafer: Force underground access via the moon. 
 · Additional E flags:
   · Enogp: No GP from random encounters.
   · Enodmachin: Replaces the D.Machin in the Searcher encounter with a
@@ -8,7 +10,7 @@
 · Additional K flags:
   · Kforge: The forge item is a key item spot.
   · Kpink: The pink tail can be traded for a key item check.
-  · Klatedark: Darkness Crystal is gated by underground access
+  · Klatedark: Darkness Crystal is gated by underground access.
   · Kstart: Specify the starting key item.
 · Additional T flags:
   · Tmintier: Treasures generated will always be at least this tier.

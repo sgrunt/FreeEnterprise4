@@ -390,26 +390,29 @@ class FlagLogicCore:
         # NOTE: mutex flags ARE handled internally by FlagSet, don't worry about them here
 
         # key item flags
+        if flagset.has('Kunsafer') and not flagset.has('Kmoon'):
+            flagset.set('Kmoon')
+            self._lib.push(log, ['correction', 'Kunsafer requires placing key items on the moon; adding Kmoon'])
+
         if flagset.has('Kforge') and flagset.has('Omode:classicforge'):
             self._simple_disable(flagset, log, 'Classic forge is incompatible with Kforge', ['Kforge'])
 
         if flagset.has('Kforge'):
             self._simple_disable_regex(flagset, log, '-smith is incompatible with Kforge', r'^-smith:')
 
-
         if flagset.has_any('Ksummon', 'Kmoon', 'Kmiab', 'Kforge') and not flagset.has('Kmain'):
             flagset.set('Kmain')
             self._lib.push(log, ['correction', 'Advanced key item randomizations are enabled; forced to add Kmain'])
 
         if flagset.has('Kvanilla'):
-            self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe'])
+            self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe', 'Kunsafer'])
             self._simple_disable_regex(flagset, log, 'Key items not randomized', ['^Kstart:'])
 
         if flagset.has('Kstart:darkness'):
             self._simple_disable(flagset, log, 'Klatedark is incompatible with starting with Darkness', ['Klatedark'])
 
         if flagset.has('Klatedark'):
-            self._simple_disable(flagset, log, 'Klatedark implicitly guarantees safe underground access', ['Kunsafe'])
+            self._simple_disable(flagset, log, 'Klatedark implicitly guarantees safe underground access', ['Kunsafe', 'Kunsafer'])
 
         if flagset.has('Kstart:pass') and not flagset.has('Pkey'):
             flagset.set('Pkey')

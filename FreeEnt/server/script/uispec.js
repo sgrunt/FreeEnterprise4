@@ -3083,6 +3083,11 @@ var FLAG_UISPEC = [
                 "hard": true
               },
               {
+                "flag": "Kunsafer",
+                "title": "Force undeground access via the moon",
+                "hard": true
+              },
+              {
                 "flag": "Klatedark",
                 "title": "Force Darkness Crystal to be gated by underground access"
               },
