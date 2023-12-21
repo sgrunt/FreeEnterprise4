@@ -247,14 +247,14 @@ def apply(env):
             weapon2 = None
             if weapon1.subtype == 'bow':
                 weapon2 = env.rnd.choice(arrows_dbview.find_all())
-            elif ((char == 'edge') or (env.meta.get('wacky_challenge') == 'omnidextrous')):
+            elif ((char == 'edge') or ('omnidextrous' in env.meta.get('wacky_challenge', []))):
                 weapon2 = env.rnd.choice(weapons_dbview.find_all())
             armor = env.rnd.choice(armor_dbview.find_all())
             head = env.rnd.choice(head_dbview.find_all())
             hand = env.rnd.choice(hand_dbview.find_all())
             kit_spec = [ ( [ weapon1 ], [1]) ]
             if weapon2:
-                quantity = [20] if (weapon1.subtype == 'bow' and env.meta.get('wacky_challenge') != 'unstackable') else [1]
+                quantity = [20] if (weapon1.subtype == 'bow' and ('unstackable' in env.meta.get('wacky_challenge', []))) else [1]
                 kit_spec = kit_spec + [ ( [ weapon2 ], quantity ) ]
             kit_spec = kit_spec + [ ([ armor ], [1]), ( [ head ], [1]), ( [ hand ], [1]) ]
         elif kit_name == 'wacky_challenge':
@@ -268,7 +268,7 @@ def apply(env):
             if type(item_set) is str:
                 item_set = [item_set]
 
-            if env.meta.get('wacky_challenge') == '3point':
+            if '3point' in env.meta.get('wacky_challenge', []):
                 item_set = list(filter(lambda i: i != 'SomaDrop', item_set))
 
             qty_list = entry[1]
@@ -288,7 +288,7 @@ def apply(env):
                         item_const = (f'#item.{item}' if type(item) is str else item.const)
                         if kit_name == 'grabbag' and item.subtype == 'arrow':
                             qty = env.rnd.randint(1,10)
-                        if env.meta.get('wacky_challenge') == 'unstackable':
+                        if 'unstackable' in env.meta.get('wacky_challenge', []):
                             qty = 1
                         kit.append( (items_dbview.find_one(lambda it: it.const == item_const), qty) )
 
