@@ -4923,7 +4923,6 @@ var FLAG_UISPEC = [
         "flag": "@Brestrict",
         "title": "Restrict required boss locations",
         "description": "Limits the locations that bosses specified in objectives can appear in. If Knofree is enabled, this will include D.Mist.",
-        "type": "select",
         "subcontrols": [
           {
             "flag": "Brestrict:summon",

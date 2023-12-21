@@ -328,14 +328,14 @@
 ..[Bunsafe]! No safety checks
 [Bnofree]! No free bosses
 [Balt:gauntlet] Alt Gauntlet
-<@Brestrict> Restrict required boss locations
-.(Brestrict:summon) Required bosses cannot be at summon spots
-.(Brestrict:moon) Required bosses cannot be at moon spots
-.(Brestrict:zot) Required bosses cannot be in the Tower of Zot
-.(Brestrict:hook) Required bosses cannot be on the Hook route
-.(Brestrict:giant) Required bosses cannot be on the Giant of Babil
-.(Brestrict:sealedcave) Required bosses cannot be in Sealed Cave
-.(Brestrict:package) Required bosses cannot be behind the Package
+(@Brestrict) Restrict required boss locations
+.[Brestrict:summon] Required bosses cannot be at summon spots
+.[Brestrict:moon] Required bosses cannot be at moon spots
+.[Brestrict:zot] Required bosses cannot be in the Tower of Zot
+.[Brestrict:hook] Required bosses cannot be on the Hook route
+.[Brestrict:giant] Required bosses cannot be on the Giant of Babil
+.[Brestrict:sealedcave] Required bosses cannot be in Sealed Cave
+.[Brestrict:package] Required bosses cannot be behind the Package
 <> Change Wyvern's opening MegaNuke
 .(Bwhyburn) Disable Wyvern's opening MegaNuke
 .(Bwhichburn) Replace Wyvern's opening MegaNuke with random attack
