@@ -405,6 +405,9 @@ class FlagLogicCore:
             self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe'])
             self._simple_disable_regex(flagset, log, 'Key items not randomized', ['^Kstart:'])
 
+        if flagset.has('Klatedark'):
+            self._simple_disable(flagset, log, 'Klatedark implicitly guarantees safe underground access', ['Kunsafe'])
+
         if flagset.has('Kstart:pass') and not flagset.has('Pkey'):
             flagset.set('Pkey')
             self._lib.push(log, ['correction', 'Kstart:pass implies Pkey'])

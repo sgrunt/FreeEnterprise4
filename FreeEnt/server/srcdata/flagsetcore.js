@@ -452,6 +452,9 @@ class FlagLogicCore {
             this._simple_disable(flagset, log, "Key items not randomized", ["Kunsafe"]);
             this._simple_disable_regex(flagset, log, "Key items not randomized", ["^Kstart:"]);
         }
+        if (flagset.has("Klatedark")) {
+            this._simple_disable(flagset, log, "Klatedark implicitly guarantees safe underground access", ["Kunsafe"]);
+        }
         if ((flagset.has("Kstart:pass") && (! flagset.has("Pkey")))) {
             flagset.set("Pkey");
             this._lib.push(log, ["correction", "Kstart:pass implies Pkey"]);

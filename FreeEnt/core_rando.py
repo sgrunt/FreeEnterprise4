@@ -725,6 +725,9 @@ def apply(env):
         if env.options.flags.has('key_items_force_hook'):
             tests.append(['#item.Magma', [], 'underground'])
 
+        if env.options.flags.has('key_items_late_darkness'):
+            tests.append(['#item.DarkCrystal', [], 'underground'])
+
         # must be able to encounter all bosses required of forced objective flags
         tests.extend(env.meta.get('objective_required_bosses', []))
 

@@ -2,6 +2,7 @@
 · Additional K flags: 
   · Kforge: The forge item is a key item spot. 
   · Kpink: The pink tail can be traded for a key item check. 
+  · Klatedark: Darkness Crystal is gated by underground access 
   · Kstart: Specify the starting key item. 
 · Additional T flags: 
   · Tmintier: Treasures generated will always be at least this tier.
@@ -12,9 +13,12 @@
   · Sno:vampires: Vampires do not appear in shops. 
   · Sno:veils: StarVeils and MoonVeils do not appear in shops. 
 · Additional B flags: 
-  · Bwhybez: Disable Golbez's Shadow summon - he starts firing spells immediately. 
+  · Bwhybez: Disable Golbez's Shadow summon - he starts firing spells
+    immediately. 
   · Bwhichbez: Randomize Golbez's and Shadow's spell lists. 
 · Additional kits: 
   · kit:adamant: An Adamant Armor. 
   · kit:cursed: A Cursed Ring.
-  · kit:hero: One tier 4-5 weapon, armor, headgear, and ring/gauntlet for the starting item, including arrows for bows and a second weapon if the starting character is Edge.
+  · kit:hero: One tier 4-5 weapon, armor, headgear, and ring/gauntlet for the
+    starting item, including arrows for bows and a second weapon if the starting
+    character is Edge (or if -wacky:omnidextrous is enabled).

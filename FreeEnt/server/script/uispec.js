@@ -3083,6 +3083,10 @@ var FLAG_UISPEC = [
                 "hard": true
               },
               {
+                "flag": "Klatedark",
+                "title": "Force Darkness Crystal to be gated by underground access"
+              },
+              {
                 "flag": "@anon16",
                 "title": "Specify starting key item",
                 "type": "select",
