@@ -73,7 +73,7 @@
 ..[Kunsafe]! No safety checks
 ..[Kunsafer]! Force undeground access via the moon 
 ..[Klatedark] Force Darkness Crystal to be gated by underground access
-..<> Specify starting key item
+..<@Kstart> Specify starting key item
 ...(Kstart:crystal) Start with the Crystal
 ...(Kstart:pass) Start with the Pass
 ...(Kstart:hook) Start with the Hook
@@ -323,7 +323,7 @@
 ..[Bunsafe]! No safety checks
 [Bnofree]! No free bosses
 [Balt:gauntlet] Alt Gauntlet
-<> Restrict required boss locations
+<@Brestrict> Restrict required boss locations
 .(Brestrict:summon) Required bosses cannot be at summon spots
 .(Brestrict:moon) Required bosses cannot be at moon spots
 .(Brestrict:zot) Required bosses cannot be in the Tower of Zot
