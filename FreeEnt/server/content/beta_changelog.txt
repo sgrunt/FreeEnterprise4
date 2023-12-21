@@ -20,5 +20,5 @@
   · kit:adamant: An Adamant Armor. 
   · kit:cursed: A Cursed Ring.
   · kit:hero: One tier 4-5 weapon, armor, headgear, and ring/gauntlet for the
-    starting item, including arrows for bows and a second weapon if the starting
-    character is Edge (or if -wacky:omnidextrous is enabled).
+    starting character, including arrows for bows and a second weapon if the
+    starting character is Edge (or if -wacky:omnidextrous is enabled).
