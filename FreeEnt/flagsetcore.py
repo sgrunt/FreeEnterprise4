@@ -523,7 +523,7 @@ class FlagLogicCore:
             print(challenges)
             # Simplified wacky compatibility logic
             # If one of these is set, none of the others in this group can be
-            WACKY_SET_1 = ['menarepigs', 'skywarriors', 'zombies', 'afflicted']
+            WACKY_SET_1 = ['menarepigs', 'skywarriors', 'zombies', 'afflicted', 'mirrormirror']
             # If one of the above is set, none of these can be
             WACKY_SET_2 = ['battlescars', 'tellahmaneuver', 'payablegolbez', 'worthfighting']
             # These are sets of mutually incompatible modes
