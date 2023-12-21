@@ -1,35 +1,20 @@
-(December 19, 2023)
-· Renamed Ktrap to Kmiab, with similar renames throughout other flags, website text, and ingame text.
-· Flash FX now default to disabled.
-· Item price changes:
-  · Cursed Ring: 35000 -> 66000
-  · Life potion: 150 -> 1000
-  · Cure2 potion: 400 -> 300
-  · Long Katana: 11000 -> 22000
-  · Ninja Sword: 66000 -> 44000
-  · Murasame: 93000 -> 66000
-  · Masamune: 106000 -> 88000
-  · Full Moon: 12000 -> 24000
-  · Cat Claw: 30000 -> 10000
-  · Mute Dagger: 10000 -> 15000
-  · Assassin Dagger: 16000 -> 20000
-  · Samurai Helm: 20000 -> 15000
-  · Dragoon Helm: 30000 -> 20000
-  · Headband: 6000 -> 10000
-  · Bandana: 9000 -> 12000
-  · Fire Armor: 30000 -> 15000
-  · Ice Armor: 35000 -> 18000
-  · Diamond Armor: 40000 -> 20000
-  · Samurai Armor: 40000 -> 20000
-  · Dragoon Armor: 50000 -> 30000
-  · Karate Gi: 4000 -> 7000
-  · Black Belt: 14000 -> 20000
-  · Bahamut orb: 85000 -> 60000
-· Item tier changes:
-  · Cat Claw: 5 -> 4
-  · Bahamut orb: 7 -> 6
-· Fixed an issue where DkMatter could replace the Pass in chests.
-· Fixed an issue where MIAB rewards would be duplicated in other chests with Tvanilla.
-· Updated Z sprites and harp songs.
-
-
+(December 20, 2023)
+· Additional K flags: 
+  · Kforge: The forge item is a key item spot. 
+  · Kpink: The pink tail can be traded for a key item check. 
+  · Kstart: Specify the starting key item. 
+· Additional T flags: 
+  · Tmintier: Treasures generated will always be at least this tier.
+  · Tvanillaish: Weight items based on vanilla item tiers.
+  · Tsemipro: Weight items halfway between Tpro and Twildish. 
+· Additional S flags: 
+  · Swildish: Weight items approximately between Sstandard and Swild. 
+  · Sno:vampires: Vampires do not appear in shops. 
+  · Sno:veils: StarVeils and MoonVeils do not appear in shops. 
+· Additional B flags: 
+  · Bwhybez: Disable Golbez's Shadow summon - he starts firing spells immediately. 
+  · Bwhichbez: Randomize Golbez's and Shadow's spell lists. 
+· Additional kits: 
+  · kit:adamant: An Adamant Armor. 
+  · kit:cursed: A Cursed Ring.
+  · kit:hero: One tier 4-5 weapon, armor, headgear, and ring/gauntlet for the starting item, including arrows for bows and a second weapon if the starting character is Edge.
