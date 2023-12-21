@@ -1,23 +1,29 @@
+(December 21, 2023)
+· Additional E flags:
+  · Enogp: No GP from random encounters.
+  · Enodmachin: Replaces the D.Machin in the Searcher encounter with a
+    Horseman.
+
 (December 20, 2023)
-· Additional K flags: 
-  · Kforge: The forge item is a key item spot. 
-  · Kpink: The pink tail can be traded for a key item check. 
-  · Klatedark: Darkness Crystal is gated by underground access 
-  · Kstart: Specify the starting key item. 
-· Additional T flags: 
+· Additional K flags:
+  · Kforge: The forge item is a key item spot.
+  · Kpink: The pink tail can be traded for a key item check.
+  · Klatedark: Darkness Crystal is gated by underground access
+  · Kstart: Specify the starting key item.
+· Additional T flags:
   · Tmintier: Treasures generated will always be at least this tier.
   · Tvanillaish: Weight items based on vanilla item tiers.
-  · Tsemipro: Weight items halfway between Tpro and Twildish. 
-· Additional S flags: 
-  · Swildish: Weight items approximately between Sstandard and Swild. 
-  · Sno:vampires: Vampires do not appear in shops. 
-  · Sno:veils: StarVeils and MoonVeils do not appear in shops. 
-· Additional B flags: 
+  · Tsemipro: Weight items halfway between Tpro and Twildish.
+· Additional S flags:
+  · Swildish: Weight items approximately between Sstandard and Swild.
+  · Sno:vampires: Vampires do not appear in shops.
+  · Sno:veils: StarVeils and MoonVeils do not appear in shops.
+· Additional B flags:
   · Bwhybez: Disable Golbez's Shadow summon - he starts firing spells
-    immediately. 
-  · Bwhichbez: Randomize Golbez's and Shadow's spell lists. 
-· Additional kits: 
-  · kit:adamant: An Adamant Armor. 
+    immediately.
+  · Bwhichbez: Randomize Golbez's and Shadow's spell lists.
+· Additional kits:
+  · kit:adamant: An Adamant Armor.
   · kit:cursed: A Cursed Ring.
   · kit:hero: One tier 4-5 weapon, armor, headgear, and ring/gauntlet for the
     starting character, including arrows for bows and a second weapon if the

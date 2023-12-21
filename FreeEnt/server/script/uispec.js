@@ -4979,6 +4979,16 @@ var FLAG_UISPEC = [
         "title": "No EXP for random encounters",
         "description": "Bosses and monster-in-a-box fights still award EXP.",
         "hard": true
+      },
+      {
+        "flag": "Enogp",
+        "title": "No GP for random encounters",
+        "hard": true
+      },
+      {
+        "flag": "Enodmachin",
+        "title": "Disable D.Machin encounters",
+        "hard": true
       }
     ]
   },

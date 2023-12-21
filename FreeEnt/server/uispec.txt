@@ -344,6 +344,8 @@
 .(Eno:jdrops) Use US version drop/sneak tables
 [Ecantrun]! Can't run from battles
 [Enoexp]! No EXP for random encounters
+[Enogp]! No GP for random encounters
+[Enodmachin]! Disable D.Machin encounters
 
 == GLITCHES
 [@G] Enable major glitches
