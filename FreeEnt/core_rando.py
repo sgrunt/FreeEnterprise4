@@ -95,6 +95,7 @@ ITEM_SLOTS = {
     RewardSlot.pink_trade_item        : ['#item.fe_Hook?', '#item.Pink?'],
     RewardSlot.forge_item             : ['underground?', '#item.Adamant?', '#item.Legend?'],
     RewardSlot.rydias_mom_item        : ['dmist?'],
+    RewardSlot.dwarf_hospital_item    : ['underground?'],
     }
 
 SUMMON_QUEST_SLOTS = {
@@ -333,6 +334,7 @@ QUEST_REWARD_CURVES = {
         RewardSlot.feymarch_king_item,
         RewardSlot.baron_throne_item,
         RewardSlot.forge_item,
+        RewardSlot.dwarf_hospital_item,
     ],
 
     'Moon_Quest' : [
@@ -389,10 +391,15 @@ def apply(env):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.forge_item)
     if not env.options.flags.has('key_item_from_pink_tail'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.pink_trade_item)
-    if env.options.flags.has('no_free_key_item'):
+    if env.options.flags.has('no_free_key_item_dwarf'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.rydias_mom_item)
+    elif env.options.flags.has('no_free_key_item'):
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.dwarf_hospital_item)
     else:
         keyitem_assigner.slot_tier(0).remove(RewardSlot.rydias_mom_item)
+        keyitem_assigner.slot_tier(0).remove(RewardSlot.dwarf_hospital_item)
 
     keyitem_assigner.item_tier(1).extend(ESSENTIAL_KEY_ITEMS)
     keyitem_assigner.item_tier(2).extend(NONESSENTIAL_KEY_ITEMS)
@@ -552,6 +559,8 @@ def apply(env):
                     
                 slot = ESSENTIAL_KEY_ITEMS[item]
                 if slot:
+                    if env.options.flags.has('no_free_key_item_dwarf') and slot == RewardSlot.toroia_hospital_item:
+                        slot = RewardSlot.dwarf_hospital_item
                     if env.options.flags.has('no_free_key_item') and slot == RewardSlot.toroia_hospital_item:
                         slot = RewardSlot.rydias_mom_item
                     rewards_assignment[slot] = item
@@ -739,9 +748,52 @@ def apply(env):
             tests.append(['#item.DarkCrystal', [], 'underground'])
 
         # must be able to encounter all bosses required of forced objective flags
-        tests.extend(env.meta.get('objective_required_bosses', []))
+        required_bosses = env.meta.get('objective_required_bosses', [])
+        tests.extend(required_bosses)
+        if env.options.flags.has('no_free_key_item'):
+            required_bosses.add('dmist')
+
+        banned_required_boss_slots = set() 
+        if env.options.flags.has('bosses_no_required_at_summon'):
+            banned_required_boss_slots.update([boss_assignment['asura_slot'],
+                                               boss_assignment['leviatan_slot'],
+                                               boss_assignment['odin_slot'],
+                                               boss_assignment['bahamut_slot']])
+        if env.options.flags.has('bosses_no_required_on_moon'):
+            banned_required_boss_slots.update([boss_assignment['bahamut_slot'],
+                                               boss_assignment['paledim_slot'],
+                                               boss_assignment['wyvern_slot'],
+                                               boss_assignment['plague_slot'],
+                                               boss_assignment['dlunar_slot'],
+                                               boss_assignment['ogopogo_slot']])
+        if env.options.flags.has('bosses_no_required_in_zot'):
+            banned_required_boss_slots.update([boss_assignment['magus_slot'],
+                                               boss_assignment['valvalis_slot']])
+        if env.options.flags.has('bosses_no_required_on_hook'):
+            banned_required_boss_slots.update([boss_assignment['kingqueen_slot'],
+                                               boss_assignment['rubicant_slot']])
+        if env.options.flags.has('bosses_no_required_in_giant'):
+            banned_required_boss_slots.update([boss_assignment['elements_slot'],
+                                               boss_assignment['cpu_slot']])
+        if env.options.flags.has('bosses_no_required_in_sealedcave'):
+            banned_required_boss_slots.update([boss_assignment['evilwall_slot']])
+        if env.options.flags.has('bosses_no_required_at_package'):
+            banned_required_boss_slots.update([boss_assignment['officer_slot']])
 
         found_valid_assignment = True
+
+        if banned_required_boss_slots:
+            for required_boss in required_bosses:
+                if required_boss in banned_required_boss_slots:
+                    if DEBUG:
+                        print(f'Boss {required_boss} is in a restricted spot')
+                    found_valid_assignment = False
+                    break
+
+        if not found_valid_assignment:
+            attempts += 1
+            continue
+
         for test in tests:
             if type(test) is list:
                 if len(test) == 3:
@@ -821,10 +873,15 @@ def apply(env):
         curves_dbview = databases.get_tvanillaish_dbview() if (env.options.flags.has('treasure_vanillaish')) else databases.get_curves_dbview()
 
         unassigned_quest_slots = [slot for slot in (list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS)) if slot not in rewards_assignment]
-        if env.options.flags.has('no_free_key_item'):
+        if env.options.flags.has('no_free_key_item_dwarf'):
             unassigned_quest_slots.remove(RewardSlot.toroia_hospital_item)
+            unassigned_quest_slots.remove(RewardSlot.rydias_mom_item)
+        elif env.options.flags.has('no_free_key_item'):
+            unassigned_quest_slots.remove(RewardSlot.toroia_hospital_item)
+            unassigned_quest_slots.remove(RewardSlot.dwarf_hospital_item)
         else:
             unassigned_quest_slots.remove(RewardSlot.rydias_mom_item)
+            unassigned_quest_slots.remove(RewardSlot.dwarf_hospital_item)
 
         if not env.options.flags.has('key_item_from_forge'):
             unassigned_quest_slots.remove(RewardSlot.forge_item)
@@ -1046,10 +1103,15 @@ def apply(env):
         potential_key_item_slots = [s for s in range(RewardSlot.MAX_COUNT) if s in rewards_assignment and isinstance(rewards_assignment[s], ItemReward) and rewards_assignment[s].is_key]
     else:
         potential_key_item_slots = list(ITEM_SLOTS)
-        if env.options.flags.has('no_free_key_item'):
+        if env.options.flags.has('no_free_key_item_dwarf'):
             potential_key_item_slots.remove(RewardSlot.toroia_hospital_item)
+            potential_key_item_slots.remove(RewardSlot.rydias_mom_item)
+        elif env.options.flags.has('no_free_key_item'):
+            potential_key_item_slots.remove(RewardSlot.toroia_hospital_item)
+            potential_key_item_slots.remove(RewardSlot.dwarf_hospital_item)
         else:
             potential_key_item_slots.remove(RewardSlot.rydias_mom_item)
+            potential_key_item_slots.remove(RewardSlot.dwarf_hospital_item)
         if env.options.flags.has('key_items_in_summon_quests'):
             potential_key_item_slots.extend(SUMMON_QUEST_SLOTS)
         if env.options.flags.has('key_items_in_moon_bosses'):

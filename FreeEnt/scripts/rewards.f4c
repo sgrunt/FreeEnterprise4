@@ -90,6 +90,7 @@ consts(reward_slot)
     $5B     forge_item
     $5C     pink_trade_item
     $5D     fixed_crystal
+    $5E     dwarf_hospital_item
 
     // current maximum: 0x60 reward slots
 }
@@ -196,6 +197,7 @@ msfpatch {
         "Forged by Kokkol                "   // $5B     forge_item
         "Adamant Grotto[$cc][tail]Pink trade[$cd]     "   // $5C     pink_trade_item
         "Objective completion            "   // $5D     fixed_crystal
+        "Dwarf Castle infirmiary         "   // $5E     dwarf_hospital_item
 }
 
 msfpatch {

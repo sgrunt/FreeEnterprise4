@@ -1,8 +1,13 @@
 (December 21, 2023)
-· Additional K flag:
+· Additional K flags:
+  · Knofree:dwarf: Move the "free" key item to Cid in the Dwarf Castle
+    hospital.
   · Kunsafer: Force underground access via the moon. 
 · Additional S flag:
   · Svanillaish: Shops have items based on their vanilla tier lists.
+· Additional B flags:
+  · Brestrict: Restrict required bosses from showing up in specified
+    locations. 
 · Additional E flags:
   · Enogp: No GP from random encounters.
   · Enodmachin: Replaces the D.Machin in the Searcher encounter with a

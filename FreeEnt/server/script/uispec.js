@@ -3016,6 +3016,11 @@ var FLAG_UISPEC = [
                 "title": "No free key item in Toroia",
                 "description": "Edward in Toroia will not give you a key item. Instead, a key item may be earned from Rydia's mom in Mist, who will appear after you have found and defeated the Mist Dragon.",
                 "hard": true
+              },
+              {
+                "flag": "Knofree:dwarf",
+                "title": "Move key item from Toroia to Dwarf Castle",
+                "hard": true
               }
             ]
           },
@@ -4864,6 +4869,41 @@ var FLAG_UISPEC = [
       },
       {
         "flag": "@anon37",
+        "title": "Restrict required boss locations",
+        "type": "select",
+        "subcontrols": [
+          {
+            "flag": "Brestrict:summon",
+            "title": "Required bosses cannot be at summon spots"
+          },
+          {
+            "flag": "Brestrict:moon",
+            "title": "Required bosses cannot be at moon spots"
+          },
+          {
+            "flag": "Brestrict:zot",
+            "title": "Required bosses cannot be in the Tower of Zot"
+          },
+          {
+            "flag": "Brestrict:hook",
+            "title": "Required bosses cannot be on the Hook route"
+          },
+          {
+            "flag": "Brestrict:giant",
+            "title": "Required bosses cannot be on the Giant of Babil"
+          },
+          {
+            "flag": "Brestrict:sealedcave",
+            "title": "Required bosses cannot be in Sealed Cave"
+          },
+          {
+            "flag": "Brestrict:package",
+            "title": "Required bosses cannot be behind the Package"
+          }
+        ]
+      },
+      {
+        "flag": "@anon38",
         "title": "Change Wyvern's opening MegaNuke",
         "type": "select",
         "subcontrols": [
@@ -4879,7 +4919,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon38",
+        "flag": "@anon39",
         "title": "Change Golbez's behaviour",
         "type": "select",
         "subcontrols": [
@@ -4899,7 +4939,7 @@ var FLAG_UISPEC = [
     "title": "ENCOUNTERS",
     "controls": [
       {
-        "flag": "@anon39",
+        "flag": "@anon40",
         "title": "Random encounter rate",
         "important": true,
         "type": "select",
@@ -4972,7 +5012,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon40",
+        "flag": "@anon41",
         "title": "Drop tables",
         "type": "select",
         "subcontrols": [
@@ -5059,7 +5099,7 @@ var FLAG_UISPEC = [
         "description": "Starter kits allow you to begin the game with additional items in your inventory.",
         "subcontrols": [
           {
-            "flag": "@anon41",
+            "flag": "@anon42",
             "title": "Kit 1",
             "type": "select",
             "subcontrols": [
@@ -5208,7 +5248,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon42",
+            "flag": "@anon43",
             "title": "Kit 2",
             "type": "select",
             "subcontrols": [
@@ -5357,7 +5397,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon43",
+            "flag": "@anon44",
             "title": "Kit 3",
             "type": "select",
             "subcontrols": [
@@ -5521,7 +5561,7 @@ var FLAG_UISPEC = [
         "title": "Edward can equip the Spoon"
       },
       {
-        "flag": "@anon44",
+        "flag": "@anon45",
         "title": "Smithy reward",
         "type": "select",
         "subcontrols": [
@@ -5559,7 +5599,7 @@ var FLAG_UISPEC = [
         ]
       },
       {
-        "flag": "@anon45",
+        "flag": "@anon46",
         "title": "Restore vanilla behaviors",
         "subcontrols": [
           {
@@ -5620,7 +5660,7 @@ var FLAG_UISPEC = [
         "description": "<ul>\n    <li>Guidingway will introduce the challenge.</li>\n    <li>Guidingway will not explain the challenge.</li>\n    <li>Wacky challenges are not intended to be balanced, robust, coherent, fair, or bug-free.</li>\n    <li>(They are intended to be wacky.)</li>\n</ul>",
         "subcontrols": [
           {
-            "flag": "@anon46",
+            "flag": "@anon47",
             "title": "Select challenge",
             "type": "select",
             "subcontrols": [
@@ -5783,7 +5823,7 @@ var FLAG_UISPEC = [
     "title": "SPOILERS",
     "controls": [
       {
-        "flag": "@anon47",
+        "flag": "@anon48",
         "title": "No spoiler log",
         "type": "select",
         "subcontrols": [
@@ -5837,7 +5877,7 @@ var FLAG_UISPEC = [
             ]
           },
           {
-            "flag": "@anon48",
+            "flag": "@anon49",
             "title": "Partial spoiler log",
             "subcontrols": [
               {
@@ -5853,7 +5893,7 @@ var FLAG_UISPEC = [
                 "title": "Spoil characters"
               },
               {
-                "flag": "@anon49",
+                "flag": "@anon50",
                 "title": "Spoil treasure chests",
                 "type": "select",
                 "subcontrols": [

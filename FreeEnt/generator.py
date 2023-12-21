@@ -599,7 +599,11 @@ def build(romfile, options, force_recompile=False):
         ]
     flags_as_hex = []
     for slug in embedded_flags:
-        flags_as_hex.append(1 if options.flags.has(slug) else 0)
+        set_flag = options.flags.has(slug)
+        # disable talking to Edward if any no_free_key_item flag is set
+        if (slug == 'no_free_key_item') and options.flags.has('no_free_key_item_dwarf'):
+            set_flag = True
+        flags_as_hex.append(1 if set_flag else 0)
     env.add_binary(BusAddress(0x21f0d0), flags_as_hex, as_script=True)
 
     # must be first
@@ -670,6 +674,8 @@ def build(romfile, options, force_recompile=False):
 
     if options.flags.has('no_free_key_item'):
         env.add_file('scripts/rydias_mom_slot.f4c')
+    if options.flags.has('no_free_key_item_dwarf'):
+        env.add_file('scripts/dwarf_hospital_slot.f4c')
 
     if options.flags.has('no_free_bosses'):
         env.add_substitution('free boss', '')

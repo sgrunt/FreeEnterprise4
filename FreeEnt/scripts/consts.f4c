@@ -33,6 +33,7 @@ consts(flag) {
     $65   fe_GotLegendSword
     $66   fe_CompletedEnoughObjectives
     $67   fe_UnlockedSewer
+    $68   fe_GotDwarfHospitalItem
     $70   fe_EncountersOff
     $71   fe_HeroSoloBattle
     $72   fe_BossBypass
