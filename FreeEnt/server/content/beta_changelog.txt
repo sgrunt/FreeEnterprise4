@@ -2,6 +2,8 @@
 · Additional K flags:
   · Knofree:dwarf: Move the "free" key item to Cid in the Dwarf Castle
     hospital.
+  · Knofree:package: Rydia's mom has the "free" key item, and appears upon
+    turning in the Package.
   · Kunsafer: Force underground access via the moon. 
 · Additional S flag:
   · Svanillaish: Shops have items based on their vanilla tier lists.

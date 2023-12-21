@@ -59,6 +59,7 @@
 .[Kvanilla]- No key item randomization
 ..[Knofree]! No free key item in Toroia
 ..[Knofree:dwarf]! Move key item from Toroia to Dwarf Castle
+..[Knofree:package]! Rydia's mom requires burning Mist to appear
 .[Kmain] Randomize key items
 ..[Ksummon]! Mix with summon quest rewards
 ..[Kmoon]! Mix with moon boss rewards

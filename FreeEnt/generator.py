@@ -601,7 +601,7 @@ def build(romfile, options, force_recompile=False):
     for slug in embedded_flags:
         set_flag = options.flags.has(slug)
         # disable talking to Edward if any no_free_key_item flag is set
-        if (slug == 'no_free_key_item') and options.flags.has('no_free_key_item_dwarf'):
+        if (slug == 'no_free_key_item') and options.flags.has_any('no_free_key_item_dwarf', 'no_free_key_item_package'):
             set_flag = True
         flags_as_hex.append(1 if set_flag else 0)
     env.add_binary(BusAddress(0x21f0d0), flags_as_hex, as_script=True)
@@ -672,7 +672,7 @@ def build(romfile, options, force_recompile=False):
     # hack: add a block area to insert default names in rescript.py
     env.add_scripts('// [[[ NAMES START ]]]\n// [[[ NAMES END ]]]')
 
-    if options.flags.has('no_free_key_item'):
+    if options.flags.has_any('no_free_key_item', 'no_free_key_item_package'):
         env.add_file('scripts/rydias_mom_slot.f4c')
     if options.flags.has('no_free_key_item_dwarf'):
         env.add_file('scripts/dwarf_hospital_slot.f4c')

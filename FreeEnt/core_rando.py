@@ -349,6 +349,9 @@ QUEST_REWARD_CURVES = {
 }
 
 def apply(env):
+    if (env.options.flags.has('no_free_key_item_package')):
+        ITEM_SLOTS[RewardSlot.rydias_mom_item] = ['#item.Package?']
+
     treasure_dbview = databases.get_treasure_dbview()
     treasure_dbview.refine(lambda t: not t.exclude)
 
@@ -394,7 +397,7 @@ def apply(env):
     if env.options.flags.has('no_free_key_item_dwarf'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
         keyitem_assigner.slot_tier(0).remove(RewardSlot.rydias_mom_item)
-    elif env.options.flags.has('no_free_key_item'):
+    elif env.options.flags.has_any('no_free_key_item', 'no_free_key_item_package'):
         keyitem_assigner.slot_tier(0).remove(RewardSlot.toroia_hospital_item)
         keyitem_assigner.slot_tier(0).remove(RewardSlot.dwarf_hospital_item)
     else:
@@ -561,7 +564,7 @@ def apply(env):
                 if slot:
                     if env.options.flags.has('no_free_key_item_dwarf') and slot == RewardSlot.toroia_hospital_item:
                         slot = RewardSlot.dwarf_hospital_item
-                    if env.options.flags.has('no_free_key_item') and slot == RewardSlot.toroia_hospital_item:
+                    if env.options.flags.has_any('no_free_key_item', 'no_free_key_item_package') and slot == RewardSlot.toroia_hospital_item:
                         slot = RewardSlot.rydias_mom_item
                     rewards_assignment[slot] = item
                     used_keyitems.add(item.item)
@@ -876,7 +879,7 @@ def apply(env):
         if env.options.flags.has('no_free_key_item_dwarf'):
             unassigned_quest_slots.remove(RewardSlot.toroia_hospital_item)
             unassigned_quest_slots.remove(RewardSlot.rydias_mom_item)
-        elif env.options.flags.has('no_free_key_item'):
+        elif env.options.flags.has_any('no_free_key_item', 'no_free_key_item_package'):
             unassigned_quest_slots.remove(RewardSlot.toroia_hospital_item)
             unassigned_quest_slots.remove(RewardSlot.dwarf_hospital_item)
         else:

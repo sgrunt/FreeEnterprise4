@@ -527,10 +527,8 @@ Have you found them all?
 }
 text(bank 1 message $79)   // $59  rydias_mom_item
 {
-Once the Mist Dragon has
-been hunted down, Rydia's
-mother in Mist will offer
-a reward.
+Rydia's mother in Mist
+will offer a reward.
 }
 text(bank 1 message $7A)   // $5A  fallen_golbez_item
 {

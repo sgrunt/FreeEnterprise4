@@ -732,6 +732,7 @@ const _FE_FLAGSPEC = {
         "Kpink",
         "Knofree",
         "Knofree:dwarf",
+        "Knofree:package",
         "Kunsafe",
         "Kunsafer",
         "Kforce:magma",
@@ -1834,7 +1835,8 @@ const _FE_FLAGSPEC = {
         ],
         [
             "Knofree",
-            "Knofree:dwarf"
+            "Knofree:dwarf",
+            "Knofree:package"
         ],
         [
             "Kunsafe",
@@ -6457,6 +6459,12 @@ const _FE_FLAGSPEC = {
             "offset": 80,
             "size": 2,
             "value": 2
+        },
+        {
+            "flag": "Knofree:package",
+            "offset": 80,
+            "size": 2,
+            "value": 3
         },
         {
             "flag": "Kunsafe",

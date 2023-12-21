@@ -3021,6 +3021,11 @@ var FLAG_UISPEC = [
                 "flag": "Knofree:dwarf",
                 "title": "Move key item from Toroia to Dwarf Castle",
                 "hard": true
+              },
+              {
+                "flag": "Knofree:package",
+                "title": "Rydia's mom requires burning Mist to appear",
+                "hard": true
               }
             ]
           },
