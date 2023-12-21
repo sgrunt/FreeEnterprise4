@@ -4631,6 +4631,18 @@ var FLAG_UISPEC = [
             ]
           },
           {
+            "flag": "Swildish",
+            "title": "Wild-ish shop randomization",
+            "subcontrols": [
+              {
+                "flag": "Sunsafe",
+                "title": "No safety checks",
+                "description": "Normally, the randomizer guarantees Cure2 potions, Life potions and StarVeils are readily available, and that Cure3 potions are available in seeds without white mages. This flag removes those checks.",
+                "hard": true
+              }
+            ]
+          },
+          {
             "flag": "Swild",
             "title": "Wild shop randomization",
             "description": "An unrestricted randomization, allowing equal chance for items to appear in any shop, including the most powerful items.",

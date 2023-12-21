@@ -157,6 +157,20 @@ def apply(env):
                     return (shop_level in ['free', 'gated'])
                 else:
                     return False
+            elif env.options.flags.has('shops_wildish'):
+                if item.tier == 7:
+                    return (shop_level in ['kokkol'])
+                elif item.tier == 6:
+                    return (shop_level in ['gated', 'kokkol'])
+                elif item.tier == 5:
+                    if (item.category in ['weapon', 'armor']):
+                        return (shop_level in ['free', 'gated']) 
+                    else:
+                        return shop_level == 'gated' 
+                elif item.tier < 5:
+                    return (shop_level in ['free', 'gated']) 
+                else:
+                    return False
             elif env.options.flags.has('shops_pro'):
                 if item.tier == 5 or item.tier == 6:
                     return (shop_level == 'kokkol')
@@ -176,7 +190,7 @@ def apply(env):
             if category == 'item':
                 if env.options.flags.has('shops_standard'):
                     category_qty = max(category_qty, int(len(candidates) * 0.9))
-                elif env.options.flags.has('shops_wild'):
+                elif env.options.flags.has('shops_wild') or env.options.flags.has('shops_wildish'):
                     category_qty = len(candidates)
 
             if len(candidates) > category_qty:
@@ -205,6 +219,35 @@ def apply(env):
                         break
                     candidates.remove(item)
                     sa.add(item.const)
+
+            if category == 'item' and env.options.flags.has('shops_wildish'):
+                # Pick two of: Siren, Coffin, HrGlass2, Bacchus, Elixir, Levia
+                # and 1-2 of the damage "wild" items and distribute them
+                # to free shops.
+                first_pool = ['#item.Siren', '#item.Coffin', '#item.HrGlass2', '#item.Bacchus', '#item.Elixir', '#item.Levia']
+                env.rnd.shuffle(first_pool)
+                picks = first_pool[slice(2)]
+                second_pool = ['#item.Grimoire', '#item.GaiaDrum', '#item.LitBolt', '#item.Blizzard', '#item.FireBomb', '#item.Stardust', '#item.ZeusRage', '#item.Boreas', '#item.BigBomb']
+                env.rnd.shuffle(second_pool)
+                picks = picks + second_pool[slice(env.rnd.randint(1, 2))]
+
+                free_shops = []
+
+                for sa in shop_assignments:
+                    if sa.shop.level == 'free' and sa.matches_category('item') and (not sa.is_full()):
+                        free_shops = free_shops + [sa]
+
+                env.rnd.shuffle(free_shops)
+
+                assigned_picks = []
+                for pick in picks:
+                    sa = free_shops.pop()
+                    sa.add(pick)
+                    assigned_picks = assigned_picks + [pick]
+                    if (not free_shops):
+                        break
+
+                candidates = filter(lambda it: it.const not in assigned_picks, candidates)
 
             category_shop_assignments = list(filter(lambda sa: sa.matches_category(category) and sa.shop.level in ['free', 'gated'], shop_assignments))
             for item in candidates:

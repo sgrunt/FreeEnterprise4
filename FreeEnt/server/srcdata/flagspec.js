@@ -864,6 +864,7 @@ const _FE_FLAGSPEC = {
         "Sshuffle",
         "Sstandard",
         "Spro",
+        "Swildish",
         "Swild",
         "Scabins",
         "Sempty",
@@ -1863,6 +1864,7 @@ const _FE_FLAGSPEC = {
             "Sshuffle",
             "Sstandard",
             "Spro",
+            "Swildish",
             "Swild",
             "Scabins",
             "Sempty"
@@ -7143,22 +7145,28 @@ const _FE_FLAGSPEC = {
             "value": 3
         },
         {
-            "flag": "Swild",
+            "flag": "Swildish",
             "offset": 184,
             "size": 3,
             "value": 4
         },
         {
-            "flag": "Scabins",
+            "flag": "Swild",
             "offset": 184,
             "size": 3,
             "value": 5
         },
         {
-            "flag": "Sempty",
+            "flag": "Scabins",
             "offset": 184,
             "size": 3,
             "value": 6
+        },
+        {
+            "flag": "Sempty",
+            "offset": 184,
+            "size": 3,
+            "value": 7
         },
         {
             "flag": "Sfree",
@@ -9034,6 +9042,10 @@ const _FE_FLAGSPEC = {
             [
                 "not",
                 "Swild"
+            ],
+            [
+                "not",
+                "Swildish"
             ],
             [
                 "not",
