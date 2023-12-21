@@ -4973,7 +4973,6 @@ var FLAG_UISPEC = [
       {
         "flag": "@anon40",
         "title": "Change Golbez's behaviour",
-        "type": "select",
         "subcontrols": [
           {
             "flag": "Bwhybez",
