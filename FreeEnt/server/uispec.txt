@@ -381,6 +381,9 @@
 ..(-kit:libra)        Libra kit
 ..(-kit:99)           99 kit
 ..(-kit:green)        Green Names kit
+..(-kit:adamant)      Adamant kit
+..(-kit:cursed)       Cursed kit
+..(-kit:hero)         Hero kit
 ..(-kit:random)       Select a random kit
 .<> Kit 2
 ..(-kit2:basic)        Basic kit
@@ -408,6 +411,9 @@
 ..(-kit2:libra)        Libra kit
 ..(-kit2:99)           99 kit
 ..(-kit2:green)        Green Names kit
+..(-kit2:adamant)      Adamant kit
+..(-kit2:cursed)       Cursed kit
+..(-kit2:hero)         Hero kit
 ..(-kit2:random)       Select a random kit
 .<> Kit 3
 ..(-kit3:basic)        Basic kit
@@ -435,6 +441,9 @@
 ..(-kit3:libra)        Libra kit
 ..(-kit3:99)           99 kit
 ..(-kit3:green)        Green Names kit
+..(-kit3:adamant)      Adamant kit
+..(-kit3:cursed)       Cursed kit
+..(-kit3:hero)         Hero kit
 ..(-kit3:random)       Select a random kit
 [-noadamants] No Adamant Armors
 [-nocursed] No Cursed Rings

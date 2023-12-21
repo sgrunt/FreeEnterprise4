@@ -193,7 +193,17 @@ KIT_SPECS = {
         ( ['Heroine', 'Carrot'],   [1] ),   # rivers
         ( ['Tiara', 'Grimoire'],   [1] ),   # schala
         ( ['RubyRing', 'CharmHarp'],   [1] ),   # zoe
-    ]
+    ],
+
+    'adamant' : [
+        ( 'AdamantArmor',   [1]  )
+    ],
+
+    'cursed': [
+        ( 'Cursed',         [1]  )
+    ],
+
+    'hero' : None # special case handling
 }
 
 
@@ -222,6 +232,31 @@ def apply(env):
             kit_spec = [
                 ( items_dbview.find_all(lambda it: it.tier >= 1 and it.tier <= 8), [99] )
                 ]
+        elif kit_name == 'hero':
+            char = env.meta['starting_character']
+            if (char == 'cecil'):
+                char = 'pcecil'
+            if (char == 'rydia'):
+                char = 'arydia'
+            weapons_dbview = items_dbview.get_refined_view(lambda it: it.category == 'weapon' and it.subtype != 'arrow' and it.tier in (4,5) and char in it.equip)
+            arrows_dbview = items_dbview.get_refined_view(lambda it: it.category == 'weapon' and it.subtype == 'arrow' and it.tier in (4,5) and char in it.equip)
+            armor_dbview = items_dbview.get_refined_view(lambda it: it.category == 'armor' and it.subtype in ('armor','robe') and it.tier in (4,5) and char in it.equip)
+            head_dbview = items_dbview.get_refined_view(lambda it: it.category == 'armor' and it.subtype in ('hat','helmet') and it.tier in (4,5) and char in it.equip)
+            hand_dbview = items_dbview.get_refined_view(lambda it: it.category == 'armor' and it.subtype in ('ring','gauntlet') and it.tier in (4,5) and it.const != '#item.Cursed' and char in it.equip)
+            weapon1 = env.rnd.choice(weapons_dbview.find_all())
+            weapon2 = None
+            if weapon1.subtype == 'bow':
+                weapon2 = env.rnd.choice(arrows_dbview.find_all())
+            elif ((char == 'edge') or (env.meta.get('wacky_challenge') == 'omnidextrous')):
+                weapon2 = env.rnd.choice(weapons_dbview.find_all())
+            armor = env.rnd.choice(armor_dbview.find_all())
+            head = env.rnd.choice(head_dbview.find_all())
+            hand = env.rnd.choice(hand_dbview.find_all())
+            kit_spec = [ ( [ weapon1 ], [1]) ]
+            if weapon2:
+                quantity = [20] if (weapon1.subtype == 'bow' and env.meta.get('wacky_challenge') != 'unstackable') else [1]
+                kit_spec = kit_spec + [ ( [ weapon2 ], quantity ) ]
+            kit_spec = kit_spec + [ ([ armor ], [1]), ( [ head ], [1]), ( [ hand ], [1]) ]
         elif kit_name == 'wacky_challenge':
             kit_spec = env.meta['wacky_starter_kit']
         else:

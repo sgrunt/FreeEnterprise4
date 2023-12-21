@@ -5151,6 +5151,18 @@ var FLAG_UISPEC = [
                 "description": "A grab bag of items selected individually by FE devs without any coordination whatsoever."
               },
               {
+                "flag": "-kit:adamant",
+                "title": "Adamant kit"
+              },
+              {
+                "flag": "-kit:cursed",
+                "title": "Cursed kit"
+              },
+              {
+                "flag": "-kit:hero",
+                "title": "Hero kit"
+              },
+              {
                 "flag": "-kit:random",
                 "title": "Select a random kit",
                 "description": "One of the other kit options, selected at random."
@@ -5288,6 +5300,18 @@ var FLAG_UISPEC = [
                 "description": "A grab bag of items selected individually by FE devs without any coordination whatsoever."
               },
               {
+                "flag": "-kit2:adamant",
+                "title": "Adamant kit"
+              },
+              {
+                "flag": "-kit2:cursed",
+                "title": "Cursed kit"
+              },
+              {
+                "flag": "-kit2:hero",
+                "title": "Hero kit"
+              },
+              {
                 "flag": "-kit2:random",
                 "title": "Select a random kit",
                 "description": "One of the other kit options, selected at random."
@@ -5423,6 +5447,18 @@ var FLAG_UISPEC = [
                 "flag": "-kit3:green",
                 "title": "Green Names kit",
                 "description": "A grab bag of items selected individually by FE devs without any coordination whatsoever."
+              },
+              {
+                "flag": "-kit3:adamant",
+                "title": "Adamant kit"
+              },
+              {
+                "flag": "-kit3:cursed",
+                "title": "Cursed kit"
+              },
+              {
+                "flag": "-kit3:hero",
+                "title": "Hero kit"
               },
               {
                 "flag": "-kit3:random",

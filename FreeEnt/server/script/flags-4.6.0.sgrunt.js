@@ -951,6 +951,9 @@ const _FE_FLAGSPEC = {
         "-kit:libra",
         "-kit:99",
         "-kit:green",
+        "-kit:adamant",
+        "-kit:cursed",
+        "-kit:hero",
         "-kit:random",
         "-kit2:basic",
         "-kit2:better",
@@ -977,6 +980,9 @@ const _FE_FLAGSPEC = {
         "-kit2:libra",
         "-kit2:99",
         "-kit2:green",
+        "-kit2:adamant",
+        "-kit2:cursed",
+        "-kit2:hero",
         "-kit2:random",
         "-kit3:basic",
         "-kit3:better",
@@ -1003,6 +1009,9 @@ const _FE_FLAGSPEC = {
         "-kit3:libra",
         "-kit3:99",
         "-kit3:green",
+        "-kit3:adamant",
+        "-kit3:cursed",
+        "-kit3:hero",
         "-kit3:random",
         "-noadamants",
         "-nocursed",
@@ -1954,6 +1963,9 @@ const _FE_FLAGSPEC = {
             "-kit:libra",
             "-kit:99",
             "-kit:green",
+            "-kit:adamant",
+            "-kit:cursed",
+            "-kit:hero",
             "-kit:random"
         ],
         [
@@ -1982,6 +1994,9 @@ const _FE_FLAGSPEC = {
             "-kit2:libra",
             "-kit2:99",
             "-kit2:green",
+            "-kit2:adamant",
+            "-kit2:cursed",
+            "-kit2:hero",
             "-kit2:random"
         ],
         [
@@ -2010,6 +2025,9 @@ const _FE_FLAGSPEC = {
             "-kit3:libra",
             "-kit3:99",
             "-kit3:green",
+            "-kit3:adamant",
+            "-kit3:cursed",
+            "-kit3:hero",
             "-kit3:random"
         ],
         [
@@ -7691,10 +7709,28 @@ const _FE_FLAGSPEC = {
             "value": 25
         },
         {
-            "flag": "-kit:random",
+            "flag": "-kit:adamant",
             "offset": 228,
             "size": 5,
             "value": 26
+        },
+        {
+            "flag": "-kit:cursed",
+            "offset": 228,
+            "size": 5,
+            "value": 27
+        },
+        {
+            "flag": "-kit:hero",
+            "offset": 228,
+            "size": 5,
+            "value": 28
+        },
+        {
+            "flag": "-kit:random",
+            "offset": 228,
+            "size": 5,
+            "value": 29
         },
         {
             "flag": "-kit2:basic",
@@ -7847,10 +7883,28 @@ const _FE_FLAGSPEC = {
             "value": 25
         },
         {
-            "flag": "-kit2:random",
+            "flag": "-kit2:adamant",
             "offset": 233,
             "size": 5,
             "value": 26
+        },
+        {
+            "flag": "-kit2:cursed",
+            "offset": 233,
+            "size": 5,
+            "value": 27
+        },
+        {
+            "flag": "-kit2:hero",
+            "offset": 233,
+            "size": 5,
+            "value": 28
+        },
+        {
+            "flag": "-kit2:random",
+            "offset": 233,
+            "size": 5,
+            "value": 29
         },
         {
             "flag": "-kit3:basic",
@@ -8003,10 +8057,28 @@ const _FE_FLAGSPEC = {
             "value": 25
         },
         {
-            "flag": "-kit3:random",
+            "flag": "-kit3:adamant",
             "offset": 238,
             "size": 5,
             "value": 26
+        },
+        {
+            "flag": "-kit3:cursed",
+            "offset": 238,
+            "size": 5,
+            "value": 27
+        },
+        {
+            "flag": "-kit3:hero",
+            "offset": 238,
+            "size": 5,
+            "value": 28
+        },
+        {
+            "flag": "-kit3:random",
+            "offset": 238,
+            "size": 5,
+            "value": 29
         },
         {
             "flag": "-noadamants",
