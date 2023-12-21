@@ -67,12 +67,16 @@
 ..[Kmiab]! Mix with monster-in-a-box chests
 ..[Kforge]! Forge provides a key item
 ..[Kpink]! Pink Tail trades for a key item
-..[Knofree]! No free key item in Toroia
+..<>! Replace free key item in Toroia
+...[Knofree]! Rydia's mom requires defeating D.Mist to appear
+...[Knofree:dwarf]! Move key item from Toroia to Dwarf Castle
+...[Knofree:package]! Rydia's mom requires burning Mist to appear
 ..<> Underworld access
 ...(Kforce:magma) Guarantee underworld access via Magma Key
 ...(Kforce:hook)! Force underworld access via Hook route
-..[Kunsafe]! No safety checks
-..[Kunsafer]! Force undeground access via the moon 
+..<>! Underworld safety checks
+...[Kunsafe]! No safety checks
+...[Kunsafer]! Force undeground access via the moon 
 ..[Klatedark] Force Darkness Crystal to be gated by underground access
 ..<@Kstart> Specify starting key item
 ...(Kstart:crystal) Start with the Crystal
