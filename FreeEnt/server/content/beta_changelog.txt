@@ -3,6 +3,10 @@
   · Tmintier no longer allows HrGlass1 and HrGlass3 to spawn on Twild if
     the specified minimum tier is greater than 5 (HrGlass2 tier).
   · Ending flags display is no longer too wide for the screen.
+· Omode:dkmatter now takes a number of DkMatters in increments of 5.
+· New O flag:
+  · Omode:ki: Obtain the specified number of key items to complete the
+    objective. Currently incompatible with Kmiab.
 
 (December 21, 2023)
 · Merged Wylem's multi-wacky fork.
