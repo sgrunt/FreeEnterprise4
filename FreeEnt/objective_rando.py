@@ -102,6 +102,8 @@ def setup(env):
 
         if env.options.flags.get_suffix('Omode:dkmatter'):
             specified_objectives['internal_dkmatter'] = True
+        if env.options.flags.get_suffix('Omode:ki'):
+            specified_objectives['internal_ki'] = True
 
         for objective_id in OBJECTIVES:
             objective = OBJECTIVES[objective_id]
@@ -136,6 +138,8 @@ def apply(env):
 
     if env.options.flags.get_suffix('Omode:dkmatter'):
         objective_ids.extend([OBJECTIVE_SLUGS_TO_IDS['internal_dkmatter']])
+    if env.options.flags.get_suffix('Omode:ki'):
+        objective_ids.extend([OBJECTIVE_SLUGS_TO_IDS['internal_ki']])
 
     # custom objectives from flags
     for objective_id in OBJECTIVES:
@@ -253,6 +257,13 @@ def apply(env):
         if OBJECTIVES[objective_id]['slug'] == 'internal_dkmatter':
             dkmatter_count = int(env.options.flags.get_suffix('Omode:dkmatter'))
             text = f'Bring {dkmatter_count} DkMatters to Kory in Agart'
+        # special case for KI hunt
+        if OBJECTIVES[objective_id]['slug'] == 'internal_ki':
+            ki_count = int(env.options.flags.get_suffix('Omode:ki'))
+            if (ki_count == 1):
+                text = f'Obtain 1 key item'
+            else:
+                text = f'Obtain {ki_count} key items'
         env.meta.setdefault('objective_descriptions', []).append(text)
         spoilers.append( SpoilerRow(f"{i+1}. {text}") )
         lines = _split_lines(text)
@@ -292,8 +303,11 @@ def apply(env):
             request_text = f"Hi, I'm Kory! Could you\ndo me a favor and bring\nme {dkmatter_count} DkMatters?\n\nThere are 45 of them\nscattered in chests\nall across the world\nand the moon!\nBut I only need {dkmatter_count}.\nThanks!"
             env.add_substitution('kory dkmatter request', request_text) 
         env.add_file('scripts/dark_matter_hunt.f4c')
-        
 
+    if OBJECTIVE_SLUGS_TO_IDS['internal_ki'] in objective_ids:
+        env.add_toggle('ki_objective')
+        ki_count = int(env.options.flags.get_suffix('Omode:ki'))
+        env.add_substitution('completed ki objective check', f"        cmp #${ki_count:02x}")
 
 if __name__ == '__main__':
     print("Checking line lengths")

@@ -404,6 +404,17 @@ class FlagLogicCore:
             flagset.set('Kmain')
             self._lib.push(log, ['correction', 'Advanced key item randomizations are enabled; forced to add Kmain'])
 
+        if flagset.get_list(r'^Omode:ki'):
+            self._simple_disable(flagset, log, 'Kmiab is currently incompatible with Omode:ki', ['Kmiab'])
+
+        if flagset.has('Owin:crystal') and flagset.has('Omode:ki17'):
+            flagset.unset('Omode:ki17')
+            flagset.push('Omode:ki16')
+            self._lib.push(log, ['correction', 'Can only collect 16 KIs for an objective with Owin:crystal; changing Omode:ki17 to Omode:ki16'])
+
+        if not flagset.has_any('Ksummon', 'Kmoon', 'Kmiab', 'Kforge') and flagset.has('Omode:ki17'):
+            self._simple_disable(flagset, log, 'Cannot replace a key item if all of them are required', ['Pkey', 'Kstart:pass'])
+
         if flagset.has('Kvanilla'):
             self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe', 'Kunsafer'])
             self._simple_disable_regex(flagset, log, 'Key items not randomized', ['^Kstart:'])

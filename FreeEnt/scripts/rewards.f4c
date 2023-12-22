@@ -262,6 +262,9 @@ msfpatch {
         // this is a key item, execute required additional steps:
         // set corresponding plot flags
         jsl $=Rewards__DeliverKeyItemSideEffects
+//%if ki_objective%
+        jsl $=EvEx__ObjectivesImpl_DoEvent 
+//%end%
 
     %DeliverNormalItem:
         // get item code back and do "give item" handler
@@ -326,6 +329,20 @@ msfpatch {
         ldx #$_Tracker__KeyItemUsedFlags
         jsl $=Tracker__SetBit
     %ItemNotYetUsed:
+
+// %if ki_objective%
+        lda $_Stats_KeyItems
+// %end%
+// %completed ki objective check%
+// %end%
+// %if ki_objective%
+        bne $+ObjectiveNotYetMet
+
+        lda #$6B
+        jsl $=Objectives__StageProgress
+
+    %ObjectiveNotYetMet:
+// %end%
     
         lda $1680
         asl a

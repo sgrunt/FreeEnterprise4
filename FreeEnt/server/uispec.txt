@@ -14,6 +14,24 @@
 ...(Omode:dkmatter35) Dark Matter Hunt - 35 Required
 ...(Omode:dkmatter40) Dark Matter Hunt - 40 Required
 ...(Omode:dkmatter45) Dark Matter Hunt - 45 Required
+..<> Key Item Hunt
+...(Omode:ki1) Obtain 1 key item
+...(Omode:ki2) Obtain 2 key items
+...(Omode:ki3) Obtain 3 key items
+...(Omode:ki4) Obtain 4 key items
+...(Omode:ki5) Obtain 5 key items
+...(Omode:ki6) Obtain 6 key items
+...(Omode:ki7) Obtain 7 key items
+...(Omode:ki8) Obtain 8 key items
+...(Omode:ki9) Obtain 9 key items
+...(Omode:ki10) Obtain 10 key items
+...(Omode:ki11) Obtain 11 key items
+...(Omode:ki12) Obtain 12 key items
+...(Omode:ki13) Obtain 13 key items
+...(Omode:ki14) Obtain 14 key items
+...(Omode:ki15) Obtain 15 key items
+...(Omode:ki16) Obtain 16 key items
+...(Omode:ki17) Obtain 17 key items
 .[@Ocustom] Custom objectives
 ..<> Custom objective #1
 ...(O1:*)
