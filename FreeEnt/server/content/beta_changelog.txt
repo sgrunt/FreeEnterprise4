@@ -6,7 +6,7 @@
 · Omode:dkmatter now takes a number of DkMatters in increments of 5.
 · New O flag:
   · Omode:ki: Obtain the specified number of key items to complete the
-    objective. Currently incompatible with Kmiab.
+    objective.
 
 (December 21, 2023)
 · Merged Wylem's multi-wacky fork.

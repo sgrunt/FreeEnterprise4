@@ -38,55 +38,55 @@ Defeat Milon, Milon Z., Kainazzo, Valvalis, Rubicant, and Elements to complete t
 45 Dark Matters are randomly placed in chests (MIABs excluded); bring all 45 of them to Kory in Agart to complete this objective.
 
 [Omode:ki1]
-Obtain 1 key item to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 1 key item to complete this objective.
 
 [Omode:ki2]
-Obtain 2 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 2 key items to complete this objective.
 
 [Omode:ki3]
-Obtain 3 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 3 key items to complete this objective.
 
 [Omode:ki4]
-Obtain 4 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 4 key items to complete this objective.
 
 [Omode:ki5]
-Obtain 5 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 5 key items to complete this objective.
 
 [Omode:ki6]
-Obtain 6 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 6 key items to complete this objective.
 
 [Omode:ki7]
-Obtain 7 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 7 key items to complete this objective.
 
 [Omode:ki8]
-Obtain 8 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 8 key items to complete this objective.
 
 [Omode:ki9]
-Obtain 9 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 9 key items to complete this objective.
 
 [Omode:ki10]
-Obtain 10 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 10 key items to complete this objective.
 
 [Omode:ki11]
-Obtain 11 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 11 key items to complete this objective.
 
 [Omode:ki12]
-Obtain 12 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 12 key items to complete this objective.
 
 [Omode:ki13]
-Obtain 13 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 13 key items to complete this objective.
 
 [Omode:ki14]
-Obtain 14 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 14 key items to complete this objective.
 
 [Omode:ki15]
-Obtain 15 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 15 key items to complete this objective.
 
 [Omode:ki16]
-Obtain 16 key items to complete this objective. Currently incompatible with <em>Kmiab</em>.
+Obtain 16 key items to complete this objective.
 
 [Omode:ki17]
-Obtain 17 key items to complete this objective. Incompatible with <em>Owin:crystal</em>. Currently incompatible with <em>Kmiab</em>.
+Obtain 17 key items to complete this objective. Incompatible with <em>Owin:crystal</em>.
 
 [Orandom:tough_quest]
 Refers only to the more difficult, later-game quest objectives.

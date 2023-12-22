@@ -87,87 +87,87 @@ var FLAG_UISPEC = [
                   {
                     "flag": "Omode:ki1",
                     "title": "Obtain 1 key item",
-                    "description": "Obtain 1 key item to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 1 key item to complete this objective."
                   },
                   {
                     "flag": "Omode:ki2",
                     "title": "Obtain 2 key items",
-                    "description": "Obtain 2 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 2 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki3",
                     "title": "Obtain 3 key items",
-                    "description": "Obtain 3 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 3 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki4",
                     "title": "Obtain 4 key items",
-                    "description": "Obtain 4 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 4 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki5",
                     "title": "Obtain 5 key items",
-                    "description": "Obtain 5 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 5 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki6",
                     "title": "Obtain 6 key items",
-                    "description": "Obtain 6 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 6 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki7",
                     "title": "Obtain 7 key items",
-                    "description": "Obtain 7 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 7 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki8",
                     "title": "Obtain 8 key items",
-                    "description": "Obtain 8 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 8 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki9",
                     "title": "Obtain 9 key items",
-                    "description": "Obtain 9 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 9 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki10",
                     "title": "Obtain 10 key items",
-                    "description": "Obtain 10 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 10 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki11",
                     "title": "Obtain 11 key items",
-                    "description": "Obtain 11 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 11 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki12",
                     "title": "Obtain 12 key items",
-                    "description": "Obtain 12 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 12 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki13",
                     "title": "Obtain 13 key items",
-                    "description": "Obtain 13 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 13 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki14",
                     "title": "Obtain 14 key items",
-                    "description": "Obtain 14 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 14 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki15",
                     "title": "Obtain 15 key items",
-                    "description": "Obtain 15 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 15 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki16",
                     "title": "Obtain 16 key items",
-                    "description": "Obtain 16 key items to complete this objective. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 16 key items to complete this objective."
                   },
                   {
                     "flag": "Omode:ki17",
                     "title": "Obtain 17 key items",
-                    "description": "Obtain 17 key items to complete this objective. Incompatible with <em>Owin:crystal</em>. Currently incompatible with <em>Kmiab</em>."
+                    "description": "Obtain 17 key items to complete this objective. Incompatible with <em>Owin:crystal</em>."
                   }
                 ]
               }

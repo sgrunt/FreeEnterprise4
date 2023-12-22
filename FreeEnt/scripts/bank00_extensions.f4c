@@ -10,6 +10,14 @@ msfpatch {
         jsl $=Rewards__DeliverFromSlot
         stz $_Rewards__PendingDeliverySlot
     %Done:
+//%if ki_objective%
+	lda $_Rewards__TriggerDeliveryEvent
+	beq $+NoItem
+	stz $_Rewards__TriggerDeliveryEvent
+	lda #$.Objectives__ProcessEventID
+	jml $00df63
+    %NoItem:
+//%end%
         jmp $80a0
 }
 

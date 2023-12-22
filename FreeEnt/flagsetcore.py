@@ -404,9 +404,6 @@ class FlagLogicCore:
             flagset.set('Kmain')
             self._lib.push(log, ['correction', 'Advanced key item randomizations are enabled; forced to add Kmain'])
 
-        if flagset.get_list(r'^Omode:ki'):
-            self._simple_disable(flagset, log, 'Kmiab is currently incompatible with Omode:ki', ['Kmiab'])
-
         if flagset.has('Owin:crystal') and flagset.has('Omode:ki17'):
             flagset.unset('Omode:ki17')
             flagset.push('Omode:ki16')

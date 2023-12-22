@@ -452,9 +452,6 @@ class FlagLogicCore {
             flagset.set("Kmain");
             this._lib.push(log, ["correction", "Advanced key item randomizations are enabled; forced to add Kmain"]);
         }
-        if (flagset.get_list("^Omode:ki")) {
-            this._simple_disable(flagset, log, "Kmiab is currently incompatible with Omode:ki", ["Kmiab"]);
-        }
         if ((flagset.has("Owin:crystal") && flagset.has("Omode:ki17"))) {
             flagset.unset("Omode:ki17");
             flagset.push("Omode:ki16");
