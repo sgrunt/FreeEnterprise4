@@ -1,4 +1,5 @@
 (December 21, 2023)
+· Merged Wylem's multi-wacky fork.
 · Additional K flags:
   · Knofree:dwarf: Move the "free" key item to Cid in the Dwarf Castle
     hospital.
