@@ -473,9 +473,7 @@ def _generate_ending_version_text(options):
     lines = [options.get_version_str()]
 
     if len(binary_flags) > 22:
-        cut_length = len(binary_flags) // 2
-        lines.append(binary_flags[:cut_length])
-        lines.append(binary_flags[cut_length:])
+        lines.extend(binary_flags[i:i+22] for i in range(0, len(binary_flags), 22))
     else:
         lines.append(binary_flags)
         lines.append('')
@@ -487,6 +485,9 @@ def _generate_ending_version_text(options):
         if line and not line.startswith('~'):
             padding_length = int((22 - len(line)) / 2)
             lines[i] = ('~' * padding_length) + line
+
+    extra_lines = 9 - len(lines)
+    lines.extend([''] * extra_lines)
 
     return '\n'.join(lines)
 
