@@ -3071,7 +3071,7 @@ var FLAG_UISPEC = [
               {
                 "flag": "Kpink",
                 "title": "Pink Tail trades for a key item",
-                "description": "The reward for trading away the Pink Tail is a key item. The vanilla Adamant Armor is added to the key item rewards pool unless -noadamants is on.",
+                "description": "The reward for trading away the Pink Tail is a key item. The vanilla Adamant Armor is added to the key item rewards pool unless adamant armors are disabled via <em>-noadamants</em>.",
                 "hard": true
               },
               {
@@ -3146,7 +3146,7 @@ var FLAG_UISPEC = [
               {
                 "flag": "@Kstart",
                 "title": "Specify starting key item",
-                "description": "Specify the starting key item, i.e. the item that is given to you at the start\nof the game. You cannot start with the Crystal if Owin:crystal is active.",
+                "description": "Specify the starting key item, i.e. the item that is given to you at the start of the game. You cannot start with the Crystal if the Crystal is the objective reward.",
                 "type": "select",
                 "subcontrols": [
                   {
@@ -3910,7 +3910,7 @@ var FLAG_UISPEC = [
       {
         "flag": "Chero",
         "title": "Hero challenge",
-        "description": "<ul><li>The starting character is your hero.</li><li>The hero is the only instance of that character available (unless other flags force it).</li><li>The hero cannot be dismissed.</li><li>The hero fights the Mt. Ordeals mirror room boss alone.</li><li>Kokkol will craft an FF4 Advance weapon usable by the hero (unless Kforge is on).</li><li>The hero gains EXP even if incapacitated.</li><li>The hero is your agility anchor.</li><li>The hero is exempt from permadeath.</li></ul>",
+        "description": "<ul><li>The starting character is your hero.</li><li>The hero is the only instance of that character available (unless other flags force it).</li><li>The hero cannot be dismissed.</li><li>The hero fights the Mt. Ordeals mirror room boss alone.</li><li>Kokkol will craft an FF4 Advance weapon usable by the hero (unless forge is set to give a key item via <em>Kforge</em>).</li><li>The hero gains EXP even if incapacitated.</li><li>The hero is your agility anchor.</li><li>The hero is exempt from permadeath.</li></ul>",
         "hard": true
       }
     ]
