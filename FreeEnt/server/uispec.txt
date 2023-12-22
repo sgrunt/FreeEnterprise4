@@ -4,7 +4,16 @@
 ..[Omode:classicforge] Classic Forge-the-Crystal
 ..[Omode:classicgiant] Classic Giant%
 ..[Omode:fiends] Fiends%
-..[Omode:dkmatter] Dark Matter Hunt
+..<> Dark Matter Hunt
+...(Omode:dkmatter5) Dark Matter Hunt - 5 Required
+...(Omode:dkmatter10) Dark Matter Hunt - 10 Required
+...(Omode:dkmatter15) Dark Matter Hunt - 15 Required
+...(Omode:dkmatter20) Dark Matter Hunt - 20 Required
+...(Omode:dkmatter25) Dark Matter Hunt - 25 Required
+...(Omode:dkmatter30) Dark Matter Hunt - 30 Required
+...(Omode:dkmatter35) Dark Matter Hunt - 35 Required
+...(Omode:dkmatter40) Dark Matter Hunt - 40 Required
+...(Omode:dkmatter45) Dark Matter Hunt - 45 Required
 .[@Ocustom] Custom objectives
 ..<> Custom objective #1
 ...(O1:*)

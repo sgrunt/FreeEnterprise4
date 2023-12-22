@@ -10,8 +10,32 @@ Defeat the Giant of Bab-il to complete this objective. In this mode, there is no
 [Omode:fiends]
 Defeat Milon, Milon Z., Kainazzo, Valvalis, Rubicant, and Elements to complete this mode.
 
-[Omode:dkmatter]
+[Omode:dkmatter5]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 5 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter10]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 10 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter15]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 15 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter20]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 20 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter25]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 25 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter30]
 45 Dark Matters are randomly placed in chests (MIABs excluded); bring 30 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter35]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 35 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter40]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring 40 of them to Kory in Agart to complete this objective.
+
+[Omode:dkmatter45]
+45 Dark Matters are randomly placed in chests (MIABs excluded); bring all 45 of them to Kory in Agart to complete this objective.
 
 [Orandom:tough_quest]
 Refers only to the more difficult, later-game quest objectives.

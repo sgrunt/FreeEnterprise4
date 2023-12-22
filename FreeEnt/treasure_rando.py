@@ -372,7 +372,7 @@ if __name__ == '__main__':
     env.meta['miab_locations'] = {}
     env.meta['required_treasures'] = {}
     env.meta['rewards_assignment'] = rewards.RewardsAssignment()
-    if options.flags.has('objective_mode_dkmatter'):
+    if env.options.flags.get_suffix('Omode:dkmatter'):
         env.meta['required_treasures']['#item.DkMatter'] = 12
 
     for slot in core_rando.CHEST_NUMBERS:
