@@ -10074,14 +10074,12 @@ class FlagLogicCore {
         }
         challenges = flagset.get_list("^-wacky:");
         if (challenges) {
-            console.log(challenges);
             WACKY_SET_1 = ["menarepigs", "skywarriors", "zombies", "afflicted", "mirrormirror"];
             WACKY_SET_2 = ["battlescars", "tellahmaneuver", "payablegolbez", "worthfighting"];
             WACKY_SET_3 = [["3point", "battlescars", "unstackable", "afflicted", "menarepigs", "skywarriors", "zombies"], ["afflicted", "friendlyfire"], ["battlescars", "afflicted", "zombies", "worthfighting"], ["darts", "musical"]];
             for (var c, _pj_c = 0, _pj_a = challenges, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
                 c = _pj_a[_pj_c];
                 mode = this._lib.re_sub("-wacky:", "", c);
-                console.log(`mode is ${mode}`);
                 if (_pj.in_es6(mode, WACKY_SET_1)) {
                     disable = function () {
     var _pj_d = [], _pj_e = WACKY_SET_1;
@@ -10094,7 +10092,6 @@ class FlagLogicCore {
     return _pj_d;
 }
 .call(this);
-                    console.log(`disabling ${disable}`);
                     this._simple_disable(flagset, log, "Can only have one enforced status wacky mode", function () {
     var _pj_d = [], _pj_e = WACKY_SET_1;
     for (var _pj_f = 0, _pj_g = _pj_e.length; (_pj_f < _pj_g); _pj_f += 1) {

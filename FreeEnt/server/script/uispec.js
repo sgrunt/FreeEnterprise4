@@ -3065,13 +3065,13 @@ var FLAG_UISPEC = [
               {
                 "flag": "Kforge",
                 "title": "Forge provides a key item",
-                "description": "The reward for turning in the Legend Sword and Adamant to Kokkol is a key item.",
+                "description": "The reward for turning in the Legend Sword and Adamant to Kokkol is a key item. The vanilla Excalibur is added to the key items rewards pool. If Chero is on, this overrides the normal supersmith reward.",
                 "hard": true
               },
               {
                 "flag": "Kpink",
                 "title": "Pink Tail trades for a key item",
-                "description": "The reward for trading away the Pink Tail is a key item.",
+                "description": "The reward for trading away the Pink Tail is a key item. The vanilla Adamant Armor is added to the key item rewards pool unless -noadamants is on.",
                 "hard": true
               },
               {
@@ -3910,7 +3910,7 @@ var FLAG_UISPEC = [
       {
         "flag": "Chero",
         "title": "Hero challenge",
-        "description": "<ul><li>The starting character is your hero.</li><li>The hero is the only instance of that character available (unless other flags force it).</li><li>The hero cannot be dismissed.</li><li>The hero fights the Mt. Ordeals mirror room boss alone.</li><li>Kokkol will craft an FF4 Advance weapon usable by the hero.</li><li>The hero gains EXP even if incapacitated.</li><li>The hero is your agility anchor.</li><li>The hero is exempt from permadeath.</li></ul>",
+        "description": "<ul><li>The starting character is your hero.</li><li>The hero is the only instance of that character available (unless other flags force it).</li><li>The hero cannot be dismissed.</li><li>The hero fights the Mt. Ordeals mirror room boss alone.</li><li>Kokkol will craft an FF4 Advance weapon usable by the hero (unless Kforge is on).</li><li>The hero gains EXP even if incapacitated.</li><li>The hero is your agility anchor.</li><li>The hero is exempt from permadeath.</li></ul>",
         "hard": true
       }
     ]
