@@ -565,7 +565,6 @@ class FlagLogicCore:
                 print(f'mode is {mode}')
                 if mode in WACKY_SET_1:
                     disable = [fr'-wacky:{m}' for m in WACKY_SET_1 if m != mode]
-                    print(f'disabling {disable}')
                     self._simple_disable(flagset, log, 'Can only have one enforced status wacky mode', [fr'-wacky:{m}' for m in WACKY_SET_1 if m != mode])
                     self._simple_disable(flagset, log, 'Modes are incompatible with enforced status wacky modes', [fr'-wacky:{m}' for m in WACKY_SET_2])
                 for group in WACKY_SET_3:
