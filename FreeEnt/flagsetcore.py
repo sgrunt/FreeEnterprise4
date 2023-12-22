@@ -546,7 +546,6 @@ class FlagLogicCore:
 
         challenges = flagset.get_list(r'^-wacky:')
         if challenges:
-            print(challenges)
             # Simplified wacky compatibility logic
             # If one of these is set, none of the others in this group can be
             WACKY_SET_1 = ['menarepigs', 'skywarriors', 'zombies', 'afflicted', 'mirrormirror']
