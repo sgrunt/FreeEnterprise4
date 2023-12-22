@@ -129,10 +129,8 @@ def setup(env):
     for x in range(0, random_count):
         remaining_challenges = find_compatible_remaining_wacky_modes(wacky_challenge)
         if len(remaining_challenges) < 1:
-            print(f'No more wacky modes available to randomly choose from. {x} found, {random_count - x} remaining.')
             break
         choice = env.rnd.choice(remaining_challenges)
-        print(f'chose {choice}')
         wacky_challenge.append(choice)
         
     if len(wacky_challenge) > 0:
@@ -170,7 +168,6 @@ def apply(env):
             if apply_func:
                 rom_bytes_used = apply_func(env, rom_base) or 0
                 ram_bytes_used = WACKY_RAM_USAGE[wacky]
-                print(f'Wacky {wacky} used {rom_bytes_used} bytes of ROM at {rom_base}' + (f' and {ram_bytes_used} bytes of RAM at {ram_base}' if ram_bytes_used else ''))
                 if rom_bytes_used:
                     if rom_base.get_bus() > WACKY_LAST_AVAILABLE_ROM_ADDR:
                         raise Exception(f"Incompatible wacky modes (too much ROM space required): {', '.join(wacky_challenge)}")
@@ -179,8 +176,6 @@ def apply(env):
                 if ram_base.get_bus() + ram_bytes_used - 1 > WACKY_LAST_AVAILABLE_RAM_BYTE:
                     raise Exception(f"Incompatible wacky modes (RAM incompatibility): {', '.join(wacky_challenge)}")
                 ram_base = ram_base.offset(ram_bytes_used)
-            else:
-                print(f'Wacky {wacky} added')
 
             text = WACKY_CHALLENGES[wacky]
             centered_text = '\n'.join([line.center(26).upper().rstrip() for line in text.split('\n')])
