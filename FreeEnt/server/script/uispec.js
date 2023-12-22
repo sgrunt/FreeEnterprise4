@@ -3065,7 +3065,7 @@ var FLAG_UISPEC = [
               {
                 "flag": "Kforge",
                 "title": "Forge provides a key item",
-                "description": "The reward for turning in the Legend Sword and Adamant to Kokkol is a key item. The vanilla Excalibur is added to the key items rewards pool. If Chero is on, this overrides the normal supersmith reward.",
+                "description": "The reward for turning in the Legend Sword and Adamant to Kokkol is a key item. The vanilla Excalibur is added to the key items rewards pool. If the hero challenge is enabled, this overrides the normal <em>Chero</em> supersmith reward.",
                 "hard": true
               },
               {

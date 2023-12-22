@@ -45,7 +45,7 @@ Key items may be awarded by the bosses of the Lunar Subterrane.
 This excludes monster-in-a-box chests in the Lunar Subterrane, unless also using Kmoon or Kunsafe.
 
 [Kforge]
-The reward for turning in the Legend Sword and Adamant to Kokkol is a key item. The vanilla Excalibur is added to the key items rewards pool. If Chero is on, this overrides the normal supersmith reward.
+The reward for turning in the Legend Sword and Adamant to Kokkol is a key item. The vanilla Excalibur is added to the key items rewards pool. If the hero challenge is enabled, this overrides the normal <em>Chero</em> supersmith reward.
 
 [Kpink]
 The reward for trading away the Pink Tail is a key item. The vanilla Adamant Armor is added to the key item rewards pool unless adamant armors are disabled via <em>-noadamants</em>.
