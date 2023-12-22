@@ -201,6 +201,9 @@ def apply(env):
                 treasure_assignment.assign(t, tier['pool'][i])
     elif env.options.flags.has('treasure_wild') or env.options.flags.has('treasure_standard'):
         max_item_tier = (99 if env.options.flags.has('treasure_wild') else (mintier if (mintier and (mintier > 5)) else 5))
+        # exclude HrGlass1 and HrGlass3 from Twild gen if HrGlass2 can't spawn
+        if (max_item_tier == 99 and mintier and mintier > 5):
+            max_item_tier = 98
         item_pool = items_dbview.get_refined_view(lambda it: it.tier <= max_item_tier).find_all()
         for t in plain_chests_dbview.find_all():
             treasure_assignment.assign(t, env.rnd.choice(item_pool).const)

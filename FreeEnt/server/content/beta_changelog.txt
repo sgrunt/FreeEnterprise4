@@ -1,3 +1,8 @@
+(December 22, 2023)
+· Bug fixes:
+  · Tmintier no longer allows HrGlass1 and HrGlass3 to spawn on Twild if
+    the specified minimum tier is greater than 5 (HrGlass2 tier).
+
 (December 21, 2023)
 · Merged Wylem's multi-wacky fork.
 · Additional K flags:

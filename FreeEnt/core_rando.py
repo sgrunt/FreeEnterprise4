@@ -945,7 +945,10 @@ def apply(env):
 
         unassigned_chest_slots = [slot for slot in CHEST_ITEM_SLOTS if slot not in rewards_assignment]
         if env.options.flags.has('treasure_standard') or env.options.flags.has('treasure_wild'):
-            src_pool = items_dbview.find_all(lambda it: it.tier >= 5)
+            # exclude HrGlass1 and HrGlass3 from MIAB items if HrGlass2 is excluded
+            min_miab_tier = mintier if (mintier and mintier >= 5) else 5
+            max_miab_tier = 98 if (env.options.flags.has('treasure_standard') or (mintier and mintier >= 6)) else 99
+            src_pool = items_dbview.find_all(lambda it: it.tier >= min_miab_tier and it.tier <= max_miab_tier)
             pool = list(src_pool)
             while len(pool) < len(unassigned_chest_slots):
                 pool.append(env.rnd.choice(src_pool))
