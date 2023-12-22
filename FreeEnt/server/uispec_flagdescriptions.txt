@@ -72,7 +72,7 @@ You are guaranteed that the Hook route through Cave Eblan is the only way to acc
 </ul>
 
 [Kunsafer]
-As Kunsafe, but you will be <em>required</em> to find your underground access on the Moon.
+As Kunsafe, but you will be <em>required</em> to obtain moon access prior to obtaining underground access.
 
 [Klatedark]
 The Darkness Crystal will be gated by underground access.

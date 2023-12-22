@@ -3133,7 +3133,7 @@ var FLAG_UISPEC = [
                   {
                     "flag": "Kunsafer",
                     "title": "Force undeground access via the moon",
-                    "description": "As Kunsafe, but you will be <em>required</em> to find your underground access on the Moon.",
+                    "description": "As Kunsafe, but you will be <em>required</em> to obtain moon access prior to obtaining underground access.",
                     "hard": true
                   }
                 ]
