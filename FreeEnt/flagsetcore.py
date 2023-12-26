@@ -414,7 +414,7 @@ class FlagLogicCore:
 
         if flagset.has('Kvanilla'):
             self._simple_disable(flagset, log, 'Key items not randomized', ['Kunsafe', 'Kunsafer'])
-            self._simple_disable_regex(flagset, log, 'Key items not randomized', ['^Kstart:'])
+            self._simple_disable_regex(flagset, log, 'Key items not randomized', r'^Kstart:')
 
         if flagset.has('Kstart:darkness'):
             self._simple_disable(flagset, log, 'Klatedark is incompatible with starting with Darkness', ['Klatedark'])

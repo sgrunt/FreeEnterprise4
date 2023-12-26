@@ -462,7 +462,7 @@ class FlagLogicCore {
         }
         if (flagset.has("Kvanilla")) {
             this._simple_disable(flagset, log, "Key items not randomized", ["Kunsafe", "Kunsafer"]);
-            this._simple_disable_regex(flagset, log, "Key items not randomized", ["^Kstart:"]);
+            this._simple_disable_regex(flagset, log, "Key items not randomized", "^Kstart:");
         }
         if (flagset.has("Kstart:darkness")) {
             this._simple_disable(flagset, log, "Klatedark is incompatible with starting with Darkness", ["Klatedark"]);

@@ -1,3 +1,6 @@
+(December 25, 2023)
+· Bug fixes:
+  · Kvanilla generation no longer errors out attempting to disable Kstart. 
 (December 22, 2023)
 · Bug fixes:
   · Tmintier no longer allows HrGlass1 and HrGlass3 to spawn on Twild if
