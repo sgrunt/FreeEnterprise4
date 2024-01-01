@@ -406,7 +406,7 @@ class FlagLogicCore:
 
         if flagset.has('Owin:crystal') and flagset.has('Omode:ki17'):
             flagset.unset('Omode:ki17')
-            flagset.push('Omode:ki16')
+            flagset.set('Omode:ki16')
             self._lib.push(log, ['correction', 'Can only collect 16 KIs for an objective with Owin:crystal; changing Omode:ki17 to Omode:ki16'])
 
         if not flagset.has_any('Ksummon', 'Kmoon', 'Kmiab', 'Kforge') and flagset.has('Omode:ki17'):

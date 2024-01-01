@@ -10148,7 +10148,7 @@ class FlagLogicCore {
         }
         if ((flagset.has("Owin:crystal") && flagset.has("Omode:ki17"))) {
             flagset.unset("Omode:ki17");
-            flagset.push("Omode:ki16");
+            flagset.set("Omode:ki16");
             this._lib.push(log, ["correction", "Can only collect 16 KIs for an objective with Owin:crystal; changing Omode:ki17 to Omode:ki16"]);
         }
         if (((! flagset.has_any("Ksummon", "Kmoon", "Kmiab", "Kforge")) && flagset.has("Omode:ki17"))) {
