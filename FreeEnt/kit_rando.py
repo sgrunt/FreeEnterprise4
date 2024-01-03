@@ -254,7 +254,7 @@ def apply(env):
             hand = env.rnd.choice(hand_dbview.find_all())
             kit_spec = [ ( [ weapon1 ], [1]) ]
             if weapon2:
-                quantity = [20] if (weapon1.subtype == 'bow' and ('unstackable' in env.meta.get('wacky_challenge', []))) else [1]
+                quantity = [20] if (weapon1.subtype == 'bow' and ('unstackable' not in env.meta.get('wacky_challenge', []))) else [1]
                 kit_spec = kit_spec + [ ( [ weapon2 ], quantity ) ]
             kit_spec = kit_spec + [ ([ armor ], [1]), ( [ head ], [1]), ( [ hand ], [1]) ]
         elif kit_name == 'wacky_challenge':

@@ -1,3 +1,8 @@
+(January 2, 2024)
+· Bug fixes:
+  · Fix inverted logic causing -kit:hero to start with one arrow instead of
+    20 arrows *unless* unstackable wacky is active.
+
 (January 1, 2024)
 · Bug fixes:
   · Fix the correction from Omode:ki17 to Omode:ki16 when Owin:crystal is on. 
