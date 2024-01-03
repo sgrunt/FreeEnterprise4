@@ -4,6 +4,8 @@
     20 arrows *unless* unstackable wacky is active.
   · Fix crash on Omode:ki and acquiring items from MIABs that do not win the
     game.
+  · Fix freeze on Omode:ki and Owin:crystal when pulling the last item from
+    a normal chest (rat tail and ribbon locations).
 
 (January 1, 2024)
 · Bug fixes:
