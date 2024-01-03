@@ -13,9 +13,11 @@ msfpatch {
 //%if ki_objective%
 	lda $_Rewards__TriggerDeliveryEvent
 	beq $+NoItem
-	stz $_Rewards__TriggerDeliveryEvent
+        ldx #$6dff  // end event on return
+        stx $1615   // [hardcoded]
 	lda #$.Objectives__ProcessEventID
-	jml $00df63
+	jsr $df63
+	stz $_Rewards__TriggerDeliveryEvent
     %NoItem:
 //%end%
         jmp $80a0

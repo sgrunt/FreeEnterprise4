@@ -2,6 +2,8 @@
 · Bug fixes:
   · Fix inverted logic causing -kit:hero to start with one arrow instead of
     20 arrows *unless* unstackable wacky is active.
+  · Fix crash on Omode:ki and acquiring items from MIABs that do not win the
+    game.
 
 (January 1, 2024)
 · Bug fixes:

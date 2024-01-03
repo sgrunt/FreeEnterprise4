@@ -264,6 +264,9 @@ msfpatch {
         // set corresponding plot flags
         jsl $=Rewards__DeliverKeyItemSideEffects
 //%if ki_objective%
+        lda $_Rewards__TriggerDeliveryEvent
+	bne $+DeliverNormalItem // don't recurse when getting the crystal
+	                        // from Omode:ki in case this hangs
         jsl $=EvEx__ObjectivesImpl_DoEvent 
 //%end%
 
