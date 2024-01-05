@@ -329,6 +329,7 @@ QUEST_REWARD_CURVES = {
         RewardSlot.pan_trade_item,
         RewardSlot.feymarch_item,
         RewardSlot.rat_trade_item,
+        RewardSlot.pink_trade_item,
         RewardSlot.sylph_item,
         RewardSlot.feymarch_queen_item,
         RewardSlot.feymarch_king_item,

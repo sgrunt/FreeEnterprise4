@@ -1,3 +1,8 @@
+(January 4, 2024)
+· Bug fixes:
+  · Fix "No reward assigned for slot 92" when Kpink does not assign the pink
+    tail trade a key item or reward in the pool.
+
 (January 2, 2024)
 · Bug fixes:
   · Fix inverted logic causing -kit:hero to start with one arrow instead of
