@@ -1,7 +1,8 @@
 (January 9, 2024)
 · Bug fixes:
   · Upstream fix from Wylem preventing "3 Point System" and "Tellah Maneuver"
-    from rolling together, which causes crashes.
+    from rolling together, which causes crashes, and "Mirror Mirror" from
+    rolling with incompatible wackies.
 
 (January 4, 2024)
 · Bug fixes:
