@@ -82,7 +82,7 @@ WACKY_RAM_USAGE = {
 }
 
 WACKY_MUTUAL_INCOMPATIBILITIES = [
-    ['3point', 'battlescars', 'unstackable', 'afflicted', 'menarepigs', 'skywarriors', 'zombies'], # These all use Wacky__InitializeAxtorHook
+    ['3point', 'battlescars', 'unstackable', 'afflicted', 'menarepigs', 'skywarriors', 'zombies', 'mirrormirror'], # These all use Wacky__InitializeAxtorHook
     ['afflicted', 'friendlyfire'], # These both use Wacky_SpellFilterHook
     ['battlescars', 'afflicted', 'zombies', 'worthfighting'], # These all use Wacky__PostBattleHook
     ['darts', 'musical'], # These both replace the Fight command
