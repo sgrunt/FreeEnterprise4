@@ -86,6 +86,7 @@ WACKY_MUTUAL_INCOMPATIBILITIES = [
     ['afflicted', 'friendlyfire'], # These both use Wacky_SpellFilterHook
     ['battlescars', 'afflicted', 'zombies', 'worthfighting'], # These all use Wacky__PostBattleHook
     ['darts', 'musical'], # These both replace the Fight command
+    ['3point','tellahmaneuver'], # These both mess with MP
 ]
 
 def find_compatible_remaining_wacky_modes(current_modes):
