@@ -871,7 +871,7 @@ def apply(env):
                         rewards_assignment[slot] = pool.pop()
                     except:
                         # Pnone + win:crystal causes an issue under Tvanilla | Tshuffle. This is a workaround to that.
-                        rewards_assignment[slot] = (ItemReward('#item.Cure1') if not is_vanilla else EmptyReward())
+                        rewards_assignment[slot] = (ItemReward('#item.Cure1') if (not is_vanilla or slot in CHEST_NUMBERS) else EmptyReward())
     else:
         # revised Rivers rando
         curves_dbview = databases.get_tvanillaish_dbview() if (env.options.flags.has('treasure_vanillaish')) else databases.get_curves_dbview()
