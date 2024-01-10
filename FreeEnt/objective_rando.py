@@ -306,6 +306,8 @@ def apply(env):
 
     if OBJECTIVE_SLUGS_TO_IDS['internal_ki'] in objective_ids:
         env.add_toggle('ki_objective')
+        if env.options.flags.has("objective_zeromus"):
+            env.add_toggle('ki_objective_crystal')
         ki_count = int(env.options.flags.get_suffix('Omode:ki'))
         env.add_substitution('completed ki objective check', f"        cmp #${ki_count:02x}")
 

@@ -3,6 +3,8 @@
   · Upstream fix from Wylem preventing "3 Point System" and "Tellah Maneuver"
     from rolling together, which causes crashes, and "Mirror Mirror" from
     rolling with incompatible wackies.
+  · Fix Omode:ki crystal award hanging when getting the last KI from a
+    non-MIAB, non-overworld chest location.
 
 (January 4, 2024)
 · Bug fixes:
