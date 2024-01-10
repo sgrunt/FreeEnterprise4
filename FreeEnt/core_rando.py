@@ -443,7 +443,7 @@ def apply(env):
     if env.options.flags.has('key_items_start_pink'):
         keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Pink'))
 
-    if env.options.flags.has('key_item_from_pink_tail'):
+    if env.options.flags.has('key_item_from_pink_tail') and not env.options.flags.has('key_items_start_pink'):
         # pink tail is essential if Kpink is on
         keyitem_assigner.item_tier(2).remove(KeyItemReward('#item.Pink'))
         keyitem_assigner.item_tier(1).append(KeyItemReward('#item.Pink'))

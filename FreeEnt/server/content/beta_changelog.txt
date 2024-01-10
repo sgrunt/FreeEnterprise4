@@ -5,6 +5,7 @@
     rolling with incompatible wackies.
   · Fix Omode:ki crystal award hanging when getting the last KI from a
     non-MIAB, non-overworld chest location.
+  · Fix Kpink/start:pink failing to generate.
 
 (January 4, 2024)
 · Bug fixes:
