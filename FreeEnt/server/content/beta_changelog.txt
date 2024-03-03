@@ -1,5 +1,6 @@
 (March 3, 2024)
 · Bug fixes:
+  · Correction to the Tvanillish Lunar Subterrane MIAB curve.
   · Fix Tmintier occasionally placing items below the specified minimum tier.
 
 (January 9, 2024)

@@ -46,7 +46,7 @@ MIAB_CaveOfSummons,1006,Cave of Summons,0,0,0,0,0,1,0,0
 MIAB_SylvanCave,1007,Sylvan Cave,0,0,1,4,1,0,1,0
 MIAB_Giant,1008,Giant of Bab-il,0,0,0,0,1,0,0,0
 MIAB_LunarPath,1009,Lunar Path,0,0,0,0,0,1,0,0
-MIAB_LunarCore,1010,Lunar Subterrane/Core,0,0,0,0,5,3,0,0
+MIAB_LunarCore,1010,Lunar Subterrane/Core,0,0,0,0,6,3,0,0
 Ungated_Quest,2001,Ungated quests,0,0,0,40,60,0,0,0
 Gated_Quest,2002,Gated quests,0,0,0,10,40,40,10,0
 Moon_Quest,2003,Moon quests,0,0,0,0,30,50,15,5
