@@ -222,7 +222,7 @@ def apply(env):
             if env.options.flags.has('treasure_semipro'):
                 weights = util.get_semiboosted_weights(weights)
             if mintier:
-                for tier in range(1,mintier-1):
+                for tier in range(1,mintier):
                     weights[mintier] += weights[tier]
                     weights[tier] = 0
 
