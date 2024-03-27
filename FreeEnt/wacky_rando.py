@@ -121,7 +121,7 @@ def setup(env):
 
     random_count = 0
     max_random_count = 6
-    for x in range(max_random_count, 1, -1):
+    for x in range(max_random_count, 0, -1):
         n = x if x > 1 else ''
         if env.options.flags.has(f'-wacky:random{n}'):
             random_count = x
