@@ -1105,7 +1105,9 @@ def apply(env):
     # need a table indicating which slots could contain key items for hinting
     # purposes, might as well do that here
     if env.options.hide_flags:
-        potential_key_item_slots = list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS) + list(CHEST_ITEM_SLOTS) + 2
+        potential_key_item_slots = list(ITEM_SLOTS) + list(SUMMON_QUEST_SLOTS) + list(MOON_BOSS_SLOTS) + list(CHEST_ITEM_SLOTS)
+        potential_key_item_slots.append(RewardSlot.forge_item)
+        potential_key_item_slots.append(RewardSlot.pink_trade_item)
     elif env.options.flags.has('key_items_vanilla'):
         potential_key_item_slots = [s for s in range(RewardSlot.MAX_COUNT) if s in rewards_assignment and isinstance(rewards_assignment[s], ItemReward) and rewards_assignment[s].is_key]
     else:
