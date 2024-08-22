@@ -1,3 +1,7 @@
+(August 21, 2024)
+· Bug fixes:
+  · Swildish can no longer occasionally place Sno: items in shops. 
+
 (May 5, 2024)
 · Bug fixes:
   · Hiding flags no longer crashes.
